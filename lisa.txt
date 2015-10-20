@@ -1,7 +1,47 @@
 Sur les diapos de JPR:
 
 166-174
-
 185-187
 
+pour un peu de cours du l'héritage.
 
+
+
+**** Explications pour le diagramme de classe ****
+
+Le diagramme de classe est bien commencé. Plusieurs explications :
+
+
+1. On a choisi le schéma de conception état car le diagramme d'états transitions (DET) du robot est fourni. On va donc faire un gros parallèle entre l'exemple du cours et le robot.
+
+
+
+2. L'état du robot est modélisé par la variable d'instance etat du Robot, de type EtatRobot. Cet état correspond en fait à tous les états qu'on voit sur le DET (donc : enRoute, figé, aVide, avideFacePlot, enCharge, enChargeFacePlot). On voit se dessiner en schéma d'héritage directement sur le DET : aVide, avideFacePlot, enCharge, enChargeFacePlot héritent de enRoute, tandis que figé est all alone. (Mettons que dans le carré jaune de "figé" il y ait d'autres états, ils auraient hérité de l'état figé...).
+
+
+
+3. Tous ces états sont des classes différentes appelées EtatRobotEnRoute, EtatRobotAVideFacePlot, etc... (parallèle avec le cours).
+
+
+
+4. Ici on essaie tant bien que mal d'implémenter une solution évolutive, pour cela, on va regarder au cas par cas les méthodes, pour factoriser au mieux le code et ne pas faire des choses inutiles.
+
+Exemple avec saisir().
+-> Dans Robot, on a 
+	void saisir(Objet o)
+Certes. Concrètement, on sait que cette méthode a) peut uniquement se déclencher si le robot est aVideFacePlot, b) renvoyer une exception (bien nommée) si appelée dans le mauvais état, c) va, si appelée au bon moment, changer l'état du robot vers enChargeFacePlot, d) va, si appelée au bon moment, changer l'objet de Robot en o.
+On va donc avoir, dans Robot :
+
+void saisir(Objet o) {
+	try {
+		etat = etat.saisir();
+		objet = o;
+	} catch (SaisirDansMauvaisEtatException e) {
+		// des problèmes
+	}
+}
+
+Et oui ! Déjà, le try est évident (on va faire que saisir() de EtatRobot renvoie SaisirDansMauvaisEtatException, et seuls dans les états qui le permettent on réimplémentera saisir() donc on aura bien objet = o exécuté au bon moment). De plus, ici, on a pas besoin de placer l'objet en paramètre de saisir de EtatRobot. Plus tard, on n'en fera rien. Et enfin, au lieu de devoir avoir une méthode changerEtat(EtatRobot er) dans Robot, on fait en sorte que saisir() de EtatRobot renvoie l'état qui suit la saisie (enChargeFacePlot donc), pour avoir le code le plus clean possible. #CeyDuGenie
+
+
+5. On a pas eu le temps d'en faire plus en TD. Donc les déclarations des méthodes du DC sont quasiment toutes à revoir.
