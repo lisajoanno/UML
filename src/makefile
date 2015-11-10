@@ -1,10 +1,9 @@
 CC = g++
-CFLAGS = -Wall
+CFLAGS = -g -Wall -Wextra -std=c++11
 EXEC_NAME = robot
 INCLUDES =
 LIBS =
-OBJ_FILES = main_robot.o Robot.o EtatRobot.o Objet.o Position.o Plot.o RobotException.o
-INSTALL_DIR = /usr/bin
+OBJ_FILES = main_robot.o Robot.o EtatRobot.o Objet.o Position.o Plot.o RobotException.o etats/EnRoute.o etats/Fige.o etats/AVide.o etats/FigeParDefaut.o etats/EnCharge.o etats/AVideFacePlot.o etats/EnChargeFacePlot.o
 
 all : $(EXEC_NAME)
 
@@ -22,8 +21,3 @@ $(EXEC_NAME) : $(OBJ_FILES)
 
 %.o: %.c
 	gcc $(CFLAGS) $(INCLUDES) -o $@ -c $<
-  
-
-  
-install :
-	cp $(EXEC_NAME) $(INSTALL_DIR)

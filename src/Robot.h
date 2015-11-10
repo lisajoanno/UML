@@ -28,6 +28,4 @@ public :
 	void figer();
 	void repartir();
 	void afficher();
-	void changerEtat(EtatRobot er);	
-    
 };

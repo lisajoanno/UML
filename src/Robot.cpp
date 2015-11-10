@@ -97,11 +97,3 @@ void Robot::afficher() {
 
 	}
 }
-
-void Robot::changerEtat(EtatRobot er) {
-	try {
-		etat = er;
-	} catch(RobotException e) {
-
-	}
-}

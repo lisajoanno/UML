@@ -1,5 +1,8 @@
 #include <iostream>
 
+#ifndef ETATROBOT_H
+#define ETATROBOT_H
+
 using namespace std;
 
 class EtatRobot {
@@ -20,3 +23,5 @@ class EtatRobot {
         EtatRobot afficher();
         EtatRobot changerEtat();
 };
+
+#endif
