@@ -1,19 +1,15 @@
-#include "Fige.h"
-
 #ifndef FIGEPARDEFAUT_H
 #define FIGEPARDEFAUT_H
+
+#include "EnRoute.h"
+#include "Fige.h"
 
 class FigeParDefaut : public Fige {
     private:
         static FigeParDefaut instance;
     public:
-        FigeParDefaut();
-        
+    	FigeParDefaut() {};
         FigeParDefaut getInstance();
-        // Pour être sûr que c'est un singleton on empeche une autre construction de la classe, et on empeche l'instanciation avec = ?
-        FigeParDefaut(FigeParDefaut const&) = delete;
-        void operator=(FigeParDefaut const&) = delete;
-
         EtatRobot repartir();
 };
 

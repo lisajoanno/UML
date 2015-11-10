@@ -8,7 +8,7 @@ Robot::Robot() {
 	position.setY(0);
 	plot = Plot();
 	objet = Objet();
-	etat = EnRoute();
+	etat = AVide();
 }
 
 string Robot::getDirection() {

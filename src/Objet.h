@@ -1,3 +1,6 @@
+#ifndef OBJET_H
+#define OBJET_H
+
 class Objet {
     
     private :
@@ -8,3 +11,5 @@ class Objet {
         
         int getPoids(); 
 };
+
+#endif

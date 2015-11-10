@@ -1,14 +1,11 @@
 #include "EnCharge.h"
 
-#ifndef ETATROBOT_H
-#define ETATROBOT_H
-#include "EnChargeFacePlot.h"
-
-AVide EnCharge::getInstance() {
+EnCharge EnCharge::getInstance() {
     return instance;
 }
 
 EtatRobot EnCharge::avancer() {
+	cout << "halo?" << endl;
     return EnCharge();
 }
 
@@ -23,5 +20,3 @@ EtatRobot EnCharge::peser() {
 EtatRobot EnCharge::rencontrerPlot() {
     return EnChargeFacePlot();
 }
-
-#endif

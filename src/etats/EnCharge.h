@@ -1,11 +1,14 @@
+#ifndef ENCHARGE_H
+#define ENCHARGE_H
+
 #include "EnRoute.h"
+#include "EnChargeFacePlot.h"
 
 class EnCharge : public EnRoute {
     private:
         static EnCharge instance;
     public:
-        EnCharge();
-        
+    	EnCharge() {};
         EnCharge getInstance();
         
         EtatRobot avancer();
@@ -13,3 +16,5 @@ class EnCharge : public EnRoute {
         EtatRobot peser();
         EtatRobot rencontrerPlot();
 };
+
+#endif

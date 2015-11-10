@@ -1,9 +1,5 @@
 #include "AVide.h"
 
-#ifndef ETATROBOT_H
-#define ETATROBOT_H
-#include "AVideFacePlot.h"
-
 AVide AVide::getInstance() {
     return instance;
 }
@@ -19,5 +15,3 @@ EtatRobot AVide::tourner() {
 EtatRobot AVide::rencontrerPlot() {
     return AVideFacePlot();
 }
-
-#endif

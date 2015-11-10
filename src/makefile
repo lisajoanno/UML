@@ -3,7 +3,7 @@ CFLAGS = -g -Wall -Wextra -std=c++11
 EXEC_NAME = robot
 INCLUDES =
 LIBS =
-OBJ_FILES = main_robot.o Robot.o EtatRobot.o Objet.o Position.o Plot.o RobotException.o etats/EnRoute.o etats/Fige.o etats/AVide.o etats/FigeParDefaut.o etats/EnCharge.o etats/AVideFacePlot.o etats/EnChargeFacePlot.o
+OBJ_FILES = main_robot.o Robot.o EtatRobot.o Objet.o Position.o Plot.o RobotException.o etats/EnRoute.o etats/Fige.o etats/FigeParDefaut.o etats/EnCharge.o etats/AVideFacePlot.o etats/EnChargeFacePlot.o etats/AVide.o 
 
 all : $(EXEC_NAME)
 

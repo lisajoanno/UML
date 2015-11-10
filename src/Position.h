@@ -1,3 +1,6 @@
+#ifndef POSITION_H
+#define POSITION_H
+
 class Position {
     
     private :
@@ -14,3 +17,5 @@ class Position {
         void setX(int x);
         void setY(int y);
 };
+
+#endif

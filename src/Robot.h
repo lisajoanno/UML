@@ -1,10 +1,13 @@
+#ifndef ROBOT_H
+#define ROBOT_H
+
 #include "Objet.h"
 #include "Plot.h"
 #include "Position.h"
 #include "EtatRobot.h"
 #include "RobotException.h"
 
-#include "etats/EnRoute.h"
+#include "etats/AVide.h"
 
 #include <iostream>
 
@@ -38,3 +41,5 @@ public :
 	void repartir();
 	void afficher();
 };
+
+#endif

@@ -1,7 +1,7 @@
-#include <iostream>
-
 #ifndef ETATROBOT_H
 #define ETATROBOT_H
+
+#include <iostream>
 
 using namespace std;
 
