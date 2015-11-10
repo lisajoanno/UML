@@ -28,5 +28,16 @@ public :
 	void repartir();
 	void afficher();
 	void changerEtat(EtatRobot er);
-
+	class AvancerImpossibleException{};
+	class TournerImpossibleException{};
+	class SaisirDansMauvaisEtatException{};
+	class PoserDansMauvaisEtatException{};
+	class PeserDansMauvaisEtatException{};
+	class RencontrerPlotDansMauvaisEtatException{};
+	class EvaluerPlotDansMauvaisEtatException{};
+	class FigerDansMauvaisEtatException{};
+	class RepartirDansMauvaisEtatException{};
+	class AfficherDansMauvaisEtatException{};
+	class ChangerEtatException{};
+	
 };
