@@ -7,8 +7,8 @@ int main() {
     robot.avancer(2,3);
     cout << "Avancé. Ma position : x : " << robot.getPosition().getX() << ", y : " << robot.getPosition().getY() <<endl;
 
-    //robot.tourner("N");
-    //cout << "J'ai tourné" << endl;
+    robot.tourner("N");
+    cout << "J'ai tourné" << endl;
 
     return 0;
 }
