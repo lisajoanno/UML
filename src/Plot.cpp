@@ -1,9 +1,9 @@
 #include "Plot.h"
 
-Position::Position() {
-    this.hauteur = 0;
+Plot::Plot() {
+    hauteur = 0;
 }
 
 int Plot::getHauteur() {
-    return this.hauteur;
+    return hauteur;
 }

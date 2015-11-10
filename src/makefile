@@ -3,7 +3,7 @@ CFLAGS = -Wall
 EXEC_NAME = robot
 INCLUDES =
 LIBS =
-OBJ_FILES = Objet.o Robot.o Position.o Plot.o
+OBJ_FILES = main_robot.o Robot.o EtatRobot.o Objet.o Position.o Plot.o
 INSTALL_DIR = /usr/bin
 
 all : $(EXEC_NAME)

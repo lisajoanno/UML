@@ -1,13 +1,12 @@
 #include "Robot.h"
 
-
 /* Constructeur vide */
 Robot::Robot() {
 	direction = "";
 	position.setX(0);
 	position.setY(0);
 /*	plot = NULL;
-	objet = NULL;*/
+	objet = NULL;*/  
 }
 
 /*
@@ -44,7 +43,7 @@ void Robot::saisir(Objet o) {
 void Robot::poser() {
 	try {
 		etat = etat.poser();
-		objet = NULL;
+		//objet = NULL;
 	} catch(PoserDansMauvaisEtatException e) {
 
 	}
@@ -75,7 +74,7 @@ void Robot::evaluerPlot() {
 	}
 }
 
-voir Robot::figer() {
+void Robot::figer() {
 	try {
 		etat = etat.figer();
 	} catch(FigerDansMauvaisEtatException e) {

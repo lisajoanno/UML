@@ -1,27 +1,27 @@
 #include "Position.h"
 
 Position::Position() {
-    this.x = 0;
-    this.y = 0;
+    x = 0;
+    y = 0;
 }
  
-Position::Position(int x, int y) {
-    this.x = x;
-    this.y = y;
+Position::Position(int x1, int y1) {
+    x = x1;
+    y = y1;
 }
 
 int Position::getX() {
-    return this.x;
+    return x;
 }
 
 int Position::getY() {
-    return this.y;
+    return y;
 }
 
-void Position::setX(int x) {
-    this.x = x;
+void Position::setX(int x1) {
+    x = x1;
 }
 
-void Position::setY(int y) {
-    this.y = y;
+void Position::setY(int y1) {
+    y = y1;
 }
