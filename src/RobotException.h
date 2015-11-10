@@ -1,5 +1,4 @@
 class RobotException {
-    
-    private:
+    public:
         RobotException();
 };
