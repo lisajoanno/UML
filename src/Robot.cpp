@@ -3,11 +3,11 @@
 
 /* Constructeur vide */
 Robot::Robot() {
-	direction = NULL;
-	position.getX() = 0;
-	position.getY() = 0;
-	plot = NULL;
-	objet = NULL;
+	direction = "";
+	position.setX(0);
+	position.setY(0);
+/*	plot = NULL;
+	objet = NULL;*/
 }
 
 /*
@@ -16,14 +16,14 @@ Robot::Robot() {
 void Robot::avancer(int x, int y) {
 	try {
 		etat = etat.avancer();
-		position.getX() = x;
-		position.getY() = y;
+		position.setX(x);
+		position.setY(y);
 	} catch(AvancerImpossibleException e) {
 
 	}
 }
 
-void Robot::tourner(String d) {
+void Robot::tourner(string d) {
 	try {
 		etat = etat.tourner();
 		direction = d;

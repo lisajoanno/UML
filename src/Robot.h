@@ -1,16 +1,25 @@
+#include "Objet.h"
+#include "Plot.h"
+#include "Position.h"
+#include "EtatRobot.h"
+
+#include <iostream>
+
+using namespace std;
+
 class Robot {
 
 private :
-	String direction;
+	string direction;
 	Position position;
 	Plot plot;
 	Objet objet;
-	Etat etat;
+	EtatRobot etat;
 public :
-	Robot() {};
+	Robot();
 	void avancer(int x, int y);
-	void tourner(String d);
-	void saisir(Object o);
+	void tourner(string d);
+	void saisir(Objet o);
 	void poser();
 	void peser();
 	void rencontrerPlot(Plot p);
