@@ -2,6 +2,7 @@
 #include "Plot.h"
 #include "Position.h"
 #include "EtatRobot.h"
+#include "RobotException.h"
 
 #include <iostream>
 
@@ -27,17 +28,6 @@ public :
 	void figer();
 	void repartir();
 	void afficher();
-	void changerEtat(EtatRobot er);
-	class AvancerImpossibleException{};
-	class TournerImpossibleException{};
-	class SaisirDansMauvaisEtatException{};
-	class PoserDansMauvaisEtatException{};
-	class PeserDansMauvaisEtatException{};
-	class RencontrerPlotDansMauvaisEtatException{};
-	class EvaluerPlotDansMauvaisEtatException{};
-	class FigerDansMauvaisEtatException{};
-	class RepartirDansMauvaisEtatException{};
-	class AfficherDansMauvaisEtatException{};
-	class ChangerEtatException{};
-	
+	void changerEtat(EtatRobot er);	
+    
 };

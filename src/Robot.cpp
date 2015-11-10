@@ -17,7 +17,7 @@ void Robot::avancer(int x, int y) {
 		etat = etat.avancer();
 		position.setX(x);
 		position.setY(y);
-	} catch(AvancerImpossibleException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -26,7 +26,7 @@ void Robot::tourner(string d) {
 	try {
 		etat = etat.tourner();
 		direction = d;
-	} catch(TournerImpossibleException e) {
+	} catch(RobotException e) {
 		
 	}
 }
@@ -35,7 +35,7 @@ void Robot::saisir(Objet o) {
 	try {
 		etat = etat.saisir();
 		objet = o;
-	} catch (SaisirDansMauvaisEtatException e) {
+	} catch (RobotException e) {
 		
 	}
 }
@@ -44,7 +44,7 @@ void Robot::poser() {
 	try {
 		etat = etat.poser();
 		//objet = NULL;
-	} catch(PoserDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -52,7 +52,7 @@ void Robot::poser() {
 void Robot::peser() {
 	try {
 		etat = etat.peser();
-	} catch(PeserDansMauvaisEtatException()) {
+	} catch(RobotException()) {
 
 	}
 }
@@ -61,7 +61,7 @@ void Robot::rencontrerPlot(Plot p) {
 	try {
 		etat = etat.rencontrerPlot();
 		plot = p;
-	} catch(RencontrerPlotDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 		
 	}
 }
@@ -69,7 +69,7 @@ void Robot::rencontrerPlot(Plot p) {
 void Robot::evaluerPlot() {
 	try {
 		etat = etat.evaluerPlot();
-	} catch(EvaluerPlotDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -77,7 +77,7 @@ void Robot::evaluerPlot() {
 void Robot::figer() {
 	try {
 		etat = etat.figer();
-	} catch(FigerDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -85,7 +85,7 @@ void Robot::figer() {
 void Robot::repartir() {
 	try {
 		etat = etat.repartir();
-	} catch(RepartirDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -93,7 +93,7 @@ void Robot::repartir() {
 void Robot::afficher() {
 	try {
 		etat = etat.afficher();
-	} catch(AfficherDansMauvaisEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
@@ -101,7 +101,7 @@ void Robot::afficher() {
 void Robot::changerEtat(EtatRobot er) {
 	try {
 		etat = er;
-	} catch(ChangerEtatException e) {
+	} catch(RobotException e) {
 
 	}
 }
