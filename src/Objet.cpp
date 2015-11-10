@@ -1,7 +1,9 @@
+#include "Objet.h"
+
 Objet::Objet() {
-    this.poids = 0;
+    poids = 0;
 }
 
-int getPoids() {
-    return this.poids;
+int Objet::getPoids() {
+    return poids;
 }

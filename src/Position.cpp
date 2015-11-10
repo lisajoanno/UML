@@ -1,3 +1,5 @@
+#include "Position.h"
+
 Position::Position() {
     this.x = 0;
     this.y = 0;
@@ -8,18 +10,18 @@ Position::Position(int x, int y) {
     this.y = y;
 }
 
-int getX() {
+int Position::getX() {
     return this.x;
 }
 
-int getY() {
+int Position::getY() {
     return this.y;
 }
 
-void setX(int x) {
+void Position::setX(int x) {
     this.x = x;
 }
 
-void setY(int y) {
+void Position::setY(int y) {
     this.y = y;
 }
