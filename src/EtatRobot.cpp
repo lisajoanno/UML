@@ -2,7 +2,7 @@
 #include "RobotException.h"
 
 EtatRobot::EtatRobot() {
-    throw RobotException();
+    
 }
         
 EtatRobot EtatRobot::avancer() {

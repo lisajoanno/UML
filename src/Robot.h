@@ -4,6 +4,8 @@
 #include "EtatRobot.h"
 #include "RobotException.h"
 
+#include "etats/EnRoute.h"
+
 #include <iostream>
 
 using namespace std;
@@ -18,6 +20,13 @@ private :
 	EtatRobot etat;
 public :
 	Robot();
+
+	string getDirection();
+	Position getPosition();
+	Plot getPlot();
+	Objet getObjet();
+	EtatRobot getEtat();
+
 	void avancer(int x, int y);
 	void tourner(string d);
 	void saisir(Objet o);

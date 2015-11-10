@@ -2,11 +2,33 @@
 
 /* Constructeur vide */
 Robot::Robot() {
+	cout << ".." << endl;
 	direction = "";
 	position.setX(0);
 	position.setY(0);
-/*	plot = NULL;
-	objet = NULL;*/  
+	plot = Plot();
+	objet = Objet();
+	etat = EnRoute();
+}
+
+string Robot::getDirection() {
+	return direction;
+}
+
+Position Robot::getPosition() {
+	return position;
+}
+
+Plot Robot::getPlot() {
+	return plot;
+}
+
+Objet Robot::getObjet() {
+	return objet;
+}
+
+EtatRobot Robot::getEtat() {
+	return etat;
 }
 
 /*
@@ -17,83 +39,63 @@ void Robot::avancer(int x, int y) {
 		etat = etat.avancer();
 		position.setX(x);
 		position.setY(y);
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::tourner(string d) {
 	try {
 		etat = etat.tourner();
 		direction = d;
-	} catch(RobotException e) {
-		
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::saisir(Objet o) {
 	try {
 		etat = etat.saisir();
 		objet = o;
-	} catch (RobotException e) {
-		
-	}
+	} catch (RobotException e) { };
 }
 
 void Robot::poser() {
 	try {
 		etat = etat.poser();
 		//objet = NULL;
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::peser() {
 	try {
 		etat = etat.peser();
-	} catch(RobotException()) {
-
-	}
+	} catch(RobotException()) {	};
 }
 
 void Robot::rencontrerPlot(Plot p) {
 	try {
 		etat = etat.rencontrerPlot();
 		plot = p;
-	} catch(RobotException e) {
-		
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::evaluerPlot() {
 	try {
 		etat = etat.evaluerPlot();
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::figer() {
 	try {
 		etat = etat.figer();
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::repartir() {
 	try {
 		etat = etat.repartir();
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }
 
 void Robot::afficher() {
 	try {
 		etat = etat.afficher();
-	} catch(RobotException e) {
-
-	}
+	} catch(RobotException e) { };
 }

@@ -1,9 +1,14 @@
 #include "Robot.h"
-#include <iostream>
 
 int main() {
-    
     cout << "Simulation de robot ! " << endl;
-    Robot robot();
+    Robot robot;
+    cout << "oui" << endl;
+    //robot.avancer(2,3);
+    cout << "J'ai avancé" << endl;
+
+    //robot.tourner("N");
+    //cout << "J'ai tourné" << endl;
+
     return 0;
 }
