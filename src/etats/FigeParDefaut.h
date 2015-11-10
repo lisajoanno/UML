@@ -4,9 +4,9 @@
 #define FIGEPARDEFAUT_H
 
 class FigeParDefaut : public Fige {
-    public:
-        static FigeParDefaut instance;
     private:
+        static FigeParDefaut instance;
+    public:
         FigeParDefaut();
         
         FigeParDefaut getInstance();

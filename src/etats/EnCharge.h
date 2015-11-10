@@ -1,9 +1,9 @@
 #include "EnRoute.h"
 
 class EnCharge : public EnRoute {
-    public:
-        static EnCharge instance;
     private:
+        static EnCharge instance;
+    public:
         EnCharge();
         
         EnCharge getInstance();

@@ -1,7 +1,7 @@
 #include "../EtatRobot.h"
 
 class EnRoute : public EtatRobot {
-    public:
     private:
+    public:
         EtatRobot figer();
 };

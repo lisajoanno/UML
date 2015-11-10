@@ -1,9 +1,9 @@
 #include "EnRoute.h"
 
 class EnChargeFacePlot : public EnRoute {
-    public:
-        static EnChargeFacePlot instance;
     private:
+        static EnChargeFacePlot instance;
+    public:
         EnChargeFacePlot();
         
         EnChargeFacePlot getInstance();

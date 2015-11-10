@@ -1,9 +1,9 @@
 #include "EnRoute.h"
 
 class AVideFacePlot : public EnRoute {
-    public:
-        static AVideFacePlot instance;
     private:
+        static AVideFacePlot instance;
+    public:
         AVideFacePlot();
         
         AVideFacePlot getInstance();
