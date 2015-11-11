@@ -1,5 +1,7 @@
 #include "AVide.h"
 
+AVide AVide::instance;
+
 AVide AVide::getInstance() {
     return instance;
 }

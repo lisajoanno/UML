@@ -4,6 +4,7 @@ int main() {
     cout << "Simulation de robot ! " << endl;
     Robot robot;
 
+    robot.getEtat();
     robot.avancer(2,3);
     cout << "Avancé. Ma position : x : " << robot.getPosition().getX() << ", y : " << robot.getPosition().getY() <<endl;
 

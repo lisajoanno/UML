@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 using namespace std;
 
 class EtatRobot {
@@ -11,17 +12,17 @@ class EtatRobot {
     
     public :
         EtatRobot();
-        EtatRobot avancer();
-        EtatRobot tourner();
-        EtatRobot saisir();
-        EtatRobot poser();
-        EtatRobot peser();
-        EtatRobot rencontrerPlot();
-        EtatRobot evaluerPlot();
-        EtatRobot figer();
-        EtatRobot repartir();
+        virtual EtatRobot avancer();
+        virtual EtatRobot tourner();
+        virtual EtatRobot saisir();
+        virtual EtatRobot poser();
+        virtual EtatRobot peser();
+        virtual EtatRobot rencontrerPlot();
+        virtual EtatRobot evaluerPlot();
+        virtual EtatRobot figer();
+        virtual EtatRobot repartir();
         EtatRobot afficher();
-        EtatRobot changerEtat();
+        virtual EtatRobot changerEtat();
 };
 
 #endif

@@ -1,5 +1,7 @@
 #include "AVideFacePlot.h"
 
+AVideFacePlot AVideFacePlot::instance;
+
 AVideFacePlot AVideFacePlot::getInstance() {
     return instance;
 }

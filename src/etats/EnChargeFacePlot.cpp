@@ -1,5 +1,7 @@
 #include "EnChargeFacePlot.h"
 
+EnChargeFacePlot EnChargeFacePlot::instance;
+
 EnChargeFacePlot EnChargeFacePlot::getInstance() {
     return instance;
 }

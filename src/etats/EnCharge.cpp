@@ -1,5 +1,7 @@
 #include "EnCharge.h"
 
+EnCharge EnCharge::instance;
+
 EnCharge EnCharge::getInstance() {
     return instance;
 }

@@ -1,5 +1,7 @@
 #include "FigeParDefaut.h"
 
+FigeParDefaut FigeParDefaut::instance;
+
 FigeParDefaut FigeParDefaut::getInstance() {
     return instance;
 }
