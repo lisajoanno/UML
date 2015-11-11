@@ -6,10 +6,10 @@
 
 class EnCharge : public EnRoute {
     private:
-        static EnCharge instance;
+        static EnCharge* instance;
     public:
     	EnCharge() {};
-        EnCharge getInstance();
+        EtatRobot* getInstance();
         
         EtatRobot avancer();
         EtatRobot tourner(); 

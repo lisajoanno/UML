@@ -5,8 +5,10 @@
 
 class Fige : public EtatRobot {
     private:
+    	static Fige* instance;
     public:
     	Fige() {};
+    	EtatRobot* getInstance();
 };
 
 #endif

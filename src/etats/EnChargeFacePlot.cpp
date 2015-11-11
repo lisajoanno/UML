@@ -1,9 +1,9 @@
 #include "EnChargeFacePlot.h"
 
-EnChargeFacePlot EnChargeFacePlot::instance;
+//EnChargeFacePlot EnChargeFacePlot::instance;
 
-EnChargeFacePlot EnChargeFacePlot::getInstance() {
-    return instance;
+EtatRobot* EnChargeFacePlot::getInstance() {
+    return new EnChargeFacePlot();
 }
 
 EtatRobot EnChargeFacePlot::poser() {

@@ -6,8 +6,11 @@
 
 class EnRoute : public EtatRobot {
     private:
+    	static EnRoute* instance;
     public:
     	EnRoute() {};
+        EtatRobot* getInstance();
+        
         EtatRobot figer();
 };
 

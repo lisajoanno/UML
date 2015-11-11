@@ -6,10 +6,10 @@
 
 class AVide : public EnRoute {
     private:
-        static AVide instance;
+        static AVide* instance;
     public:       
     	AVide() {}; 
-        AVide getInstance();
+        EtatRobot* getInstance();
         
         EtatRobot avancer();
         EtatRobot tourner();

@@ -1,13 +1,12 @@
 #include "EnCharge.h"
 
-EnCharge EnCharge::instance;
+//EnCharge EnCharge::instance;
 
-EnCharge EnCharge::getInstance() {
-    return instance;
+EtatRobot* EnCharge::getInstance() {
+    return new EnCharge();
 }
 
 EtatRobot EnCharge::avancer() {
-	cout << "halo?" << endl;
     return EnCharge();
 }
 

@@ -20,7 +20,7 @@ private :
 	Position position;
 	Plot plot;
 	Objet objet;
-	EtatRobot etat;
+	EtatRobot* etat;
 public :
 	Robot();
 
@@ -28,7 +28,7 @@ public :
 	Position getPosition();
 	Plot getPlot();
 	Objet getObjet();
-	EtatRobot getEtat();
+	EtatRobot* getEtat();
 
 	void avancer(int x, int y);
 	void tourner(string d);

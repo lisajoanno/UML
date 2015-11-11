@@ -1,9 +1,9 @@
 #include "FigeParDefaut.h"
 
-FigeParDefaut FigeParDefaut::instance;
+//FigeParDefaut FigeParDefaut::instance;
 
-FigeParDefaut FigeParDefaut::getInstance() {
-    return instance;
+EtatRobot* FigeParDefaut::getInstance() {
+    return new FigeParDefaut();
 }
 
 EtatRobot FigeParDefaut::repartir() {
