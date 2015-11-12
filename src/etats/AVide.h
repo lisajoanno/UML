@@ -12,8 +12,8 @@ class AVide : public EnRoute {
         EtatRobot* getInstance();
         
         EtatRobot avancer();
-        EtatRobot tourner();
-        EtatRobot rencontrerPlot();
+        EtatRobot* tourner();
+        EtatRobot* rencontrerPlot();
 };
 
 #endif

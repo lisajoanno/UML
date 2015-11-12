@@ -11,7 +11,7 @@ class FigeParDefaut : public Fige {
     	FigeParDefaut() {};
         EtatRobot* getInstance();
         
-        EtatRobot repartir();
+        EtatRobot* repartir();
 };
 
 #endif

@@ -8,15 +8,7 @@ EtatRobot EtatRobot::avancer() {
     throw RobotException();
 }
 
-EtatRobot EtatRobot::tourner() {
-    throw RobotException();
-}
-
-EtatRobot EtatRobot::saisir() {
-    throw RobotException();
-}
-
-EtatRobot EtatRobot::poser() {
+EtatRobot EtatRobot::evaluerPlot() {
     throw RobotException();
 }
 
@@ -24,26 +16,30 @@ EtatRobot EtatRobot::peser() {
     throw RobotException();
 }
 
-EtatRobot EtatRobot::rencontrerPlot() {
+EtatRobot* EtatRobot::tourner() {
     throw RobotException();
 }
 
-EtatRobot EtatRobot::evaluerPlot() {
+EtatRobot* EtatRobot::saisir() {
     throw RobotException();
 }
 
-EtatRobot EtatRobot::figer() {
+EtatRobot* EtatRobot::poser() {
     throw RobotException();
 }
 
-EtatRobot EtatRobot::repartir() {
+EtatRobot* EtatRobot::rencontrerPlot() {
+    throw RobotException();
+}
+
+EtatRobot* EtatRobot::figer() {
+    throw RobotException();
+}
+
+EtatRobot* EtatRobot::repartir() {
     throw RobotException();
 }
 
 EtatRobot EtatRobot::afficher() {
-    throw RobotException();
-}
-
-EtatRobot EtatRobot::changerEtat() {
     throw RobotException();
 }

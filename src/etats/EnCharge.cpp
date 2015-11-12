@@ -10,14 +10,14 @@ EtatRobot EnCharge::avancer() {
     return EnCharge();
 }
 
-EtatRobot EnCharge::tourner() {
-    return EnCharge();
+EtatRobot* EnCharge::tourner() {
+    return EnCharge().getInstance();
 }
 
 EtatRobot EnCharge::peser() {
     return EnCharge();
 }
 
-EtatRobot EnCharge::rencontrerPlot() {
-    return EnChargeFacePlot();
+EtatRobot* EnCharge::rencontrerPlot() {
+    return EnChargeFacePlot().getInstance();
 }

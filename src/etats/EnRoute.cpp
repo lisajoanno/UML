@@ -6,6 +6,6 @@ EtatRobot* EnRoute::getInstance() {
     return instance;
 }
 
-EtatRobot EnRoute::figer() {
-    return Fige();
+EtatRobot* EnRoute::figer() {
+    return Fige().getInstance();
 }

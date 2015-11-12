@@ -12,9 +12,9 @@ class EnCharge : public EnRoute {
         EtatRobot* getInstance();
         
         EtatRobot avancer();
-        EtatRobot tourner(); 
+        EtatRobot* tourner(); 
         EtatRobot peser();
-        EtatRobot rencontrerPlot();
+        EtatRobot* rencontrerPlot();
 };
 
 #endif

@@ -6,6 +6,6 @@ EtatRobot* FigeParDefaut::getInstance() {
     return instance;
 }
 
-EtatRobot FigeParDefaut::repartir() {
-    return EnRoute();
+EtatRobot* FigeParDefaut::repartir() {
+    return EnRoute().getInstance();
 }

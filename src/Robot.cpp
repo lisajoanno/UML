@@ -44,21 +44,21 @@ void Robot::avancer(int x, int y) {
 
 void Robot::tourner(string d) {
 	try {
-		etat->tourner();
+		etat = etat->tourner();
 		direction = d;
 	} catch(RobotException e) { };
 }
 
 void Robot::saisir(Objet o) {
 	try {
-		etat->saisir();
+		etat = etat->saisir();
 		objet = o;
 	} catch (RobotException e) { };
 }
 
 void Robot::poser() {
 	try {
-		etat->poser();
+		etat = etat->poser();
 		//objet = NULL;
 	} catch(RobotException e) { };
 }
@@ -71,7 +71,7 @@ void Robot::peser() {
 
 void Robot::rencontrerPlot(Plot p) {
 	try {
-		etat->rencontrerPlot();
+		etat = etat->rencontrerPlot();
 		plot = p;
 	} catch(RobotException e) { };
 }
@@ -84,13 +84,13 @@ void Robot::evaluerPlot() {
 
 void Robot::figer() {
 	try {
-		etat->figer();
+		etat = etat->figer();
 	} catch(RobotException e) { };
 }
 
 void Robot::repartir() {
 	try {
-		etat->repartir();
+		etat = etat->repartir();
 	} catch(RobotException e) { };
 }
 

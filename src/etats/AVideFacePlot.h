@@ -13,8 +13,8 @@ class AVideFacePlot : public EnRoute {
         EtatRobot* getInstance();
         
         EtatRobot evaluerPlot();
-        EtatRobot saisir();
-        EtatRobot tourner();
+        EtatRobot* saisir();
+        EtatRobot* tourner();
 };
 
 #endif

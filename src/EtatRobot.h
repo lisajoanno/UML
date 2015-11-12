@@ -12,17 +12,19 @@ class EtatRobot {
     
     public :
         EtatRobot();
+
         virtual EtatRobot avancer();
-        virtual EtatRobot tourner();
-        virtual EtatRobot saisir();
-        virtual EtatRobot poser();
-        virtual EtatRobot peser();
-        virtual EtatRobot rencontrerPlot();
         virtual EtatRobot evaluerPlot();
-        virtual EtatRobot figer();
-        virtual EtatRobot repartir();
+        virtual EtatRobot peser();
+
+        virtual EtatRobot* tourner();
+        virtual EtatRobot* saisir();
+        virtual EtatRobot* poser();
+        virtual EtatRobot* rencontrerPlot();
+        virtual EtatRobot* figer();
+        virtual EtatRobot* repartir();
+
         EtatRobot afficher();
-        virtual EtatRobot changerEtat();
 };
 
 #endif

@@ -10,10 +10,10 @@ EtatRobot AVideFacePlot::evaluerPlot() {
     return AVideFacePlot();
 }
 
-EtatRobot AVideFacePlot::saisir() {
-    return EnChargeFacePlot();
+EtatRobot* AVideFacePlot::saisir() {
+    return EnChargeFacePlot().getInstance();
 }
 
-EtatRobot AVideFacePlot::tourner() {
-    return AVide();
+EtatRobot* AVideFacePlot::tourner() {
+    return AVide().getInstance();
 }

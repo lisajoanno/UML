@@ -12,10 +12,10 @@ class EnChargeFacePlot : public EnRoute {
     	EnChargeFacePlot() {};
         EtatRobot* getInstance();
         
-        EtatRobot poser();
+        EtatRobot* poser();
         EtatRobot peser(); 
         EtatRobot evaluerPlot();
-        EtatRobot tourner();
+        EtatRobot* tourner();
 };
 
 #endif

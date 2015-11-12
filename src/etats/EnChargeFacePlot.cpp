@@ -6,8 +6,8 @@ EtatRobot* EnChargeFacePlot::getInstance() {
     return instance;
 }
 
-EtatRobot EnChargeFacePlot::poser() {
-    return AVideFacePlot();
+EtatRobot* EnChargeFacePlot::poser() {
+    return AVideFacePlot().getInstance();
 }
 
 EtatRobot EnChargeFacePlot::peser() {
@@ -18,7 +18,7 @@ EtatRobot EnChargeFacePlot::evaluerPlot() {
     return EnChargeFacePlot();
 }
 
-EtatRobot EnChargeFacePlot::tourner() {
-    return EnCharge();
+EtatRobot* EnChargeFacePlot::tourner() {
+    return EnCharge().getInstance();
 }
 

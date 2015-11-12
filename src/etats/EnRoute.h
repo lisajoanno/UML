@@ -11,7 +11,7 @@ class EnRoute : public EtatRobot {
     	EnRoute() {};
         EtatRobot* getInstance();
         
-        EtatRobot figer();
+        EtatRobot* figer();
 };
 
 #endif
