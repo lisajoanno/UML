@@ -1,9 +1,9 @@
 #include "AVide.h"
 
-//AVide AVide::instance;
+AVide* AVide::instance = new AVide();
 
 EtatRobot* AVide::getInstance() {
-    return new AVide();
+    return instance;
 }
 
 EtatRobot AVide::avancer() {

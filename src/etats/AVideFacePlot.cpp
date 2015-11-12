@@ -1,9 +1,9 @@
 #include "AVideFacePlot.h"
 
-//AVideFacePlot AVideFacePlot::instance;
+AVideFacePlot* AVideFacePlot::instance = new AVideFacePlot();
 
 EtatRobot* AVideFacePlot::getInstance() {
-    return new AVideFacePlot();
+    return instance;
 }
 
 EtatRobot AVideFacePlot::evaluerPlot() {

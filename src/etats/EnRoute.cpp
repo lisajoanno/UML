@@ -1,7 +1,9 @@
 #include "EnRoute.h"
 
+EnRoute* EnRoute::instance = new EnRoute();
+
 EtatRobot* EnRoute::getInstance() {
-    return new EnRoute();
+    return instance;
 }
 
 EtatRobot EnRoute::figer() {

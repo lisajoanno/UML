@@ -1,9 +1,9 @@
 #include "EnCharge.h"
 
-//EnCharge EnCharge::instance;
+EnCharge* EnCharge::instance = new EnCharge();
 
 EtatRobot* EnCharge::getInstance() {
-    return new EnCharge();
+    return instance;
 }
 
 EtatRobot EnCharge::avancer() {
