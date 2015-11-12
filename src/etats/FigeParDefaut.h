@@ -10,6 +10,7 @@ class FigeParDefaut : public Fige {
     public:
     	FigeParDefaut() {};
         FigeParDefaut* getInstance();
+        string getName();
         
         EtatRobot* repartir();
 };

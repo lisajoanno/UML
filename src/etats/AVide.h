@@ -10,10 +10,12 @@ class AVide : public EnRoute {
     public:       
     	AVide() {}; 
         AVide* getInstance();
+        string getName();
         
         EtatRobot avancer();
         EtatRobot* tourner();
         EtatRobot* rencontrerPlot();
+
 };
 
 #endif

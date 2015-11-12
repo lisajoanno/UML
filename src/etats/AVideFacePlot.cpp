@@ -17,3 +17,7 @@ EtatRobot* AVideFacePlot::saisir() {
 EtatRobot* AVideFacePlot::tourner() {
     return AVide().getInstance();
 }
+
+string AVideFacePlot::getName() {
+	return "A vide face plot";
+}

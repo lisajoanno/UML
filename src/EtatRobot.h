@@ -12,6 +12,8 @@ class EtatRobot {
     
     public :
         EtatRobot();
+        EtatRobot* getInstance();
+        virtual string getName();
 
         virtual EtatRobot avancer();
         virtual EtatRobot evaluerPlot();
@@ -25,6 +27,7 @@ class EtatRobot {
         virtual EtatRobot* repartir();
 
         EtatRobot afficher();
+
 };
 
 #endif

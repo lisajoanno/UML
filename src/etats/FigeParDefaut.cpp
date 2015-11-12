@@ -9,3 +9,7 @@ FigeParDefaut* FigeParDefaut::getInstance() {
 EtatRobot* FigeParDefaut::repartir() {
     return EnRoute().getInstance();
 }
+
+string FigeParDefaut::getName() {
+	return "Figé par défaut";
+}

@@ -17,3 +17,7 @@ EtatRobot* AVide::tourner() {
 EtatRobot* AVide::rencontrerPlot() {
     return AVideFacePlot().getInstance();
 }
+
+string AVide::getName() {
+	return "A vide";
+}

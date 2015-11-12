@@ -34,9 +34,9 @@ public :
 	void tourner(string d);
 	void saisir(Objet o);
 	void poser();
-	void peser();
+	int peser();
 	void rencontrerPlot(Plot p);
-	void evaluerPlot();
+	int evaluerPlot();
 	void figer();
 	void repartir();
 	void afficher();

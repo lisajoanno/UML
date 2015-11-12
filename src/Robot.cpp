@@ -63,9 +63,10 @@ void Robot::poser() {
 	} catch(RobotException e) { };
 }
 
-void Robot::peser() {
+int Robot::peser() {
 	try {
 		etat->peser();
+		return objet.getPoids();
 	} catch(RobotException()) {	};
 }
 
@@ -76,9 +77,10 @@ void Robot::rencontrerPlot(Plot p) {
 	} catch(RobotException e) { };
 }
 
-void Robot::evaluerPlot() {
+int Robot::evaluerPlot() {
 	try {
 		etat->evaluerPlot();
+		return plot.getHauteur();
 	} catch(RobotException e) { };
 }
 

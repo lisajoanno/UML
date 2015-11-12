@@ -4,6 +4,11 @@
 EtatRobot::EtatRobot() {
 }
         
+EtatRobot* EtatRobot::getInstance() {
+    // Ma foi ça vire le warning :/
+    return this;
+}
+
 EtatRobot EtatRobot::avancer() {
     throw RobotException();
 }
@@ -42,4 +47,8 @@ EtatRobot* EtatRobot::repartir() {
 
 EtatRobot EtatRobot::afficher() {
     throw RobotException();
+}
+
+string EtatRobot::getName() {
+	return "";
 }

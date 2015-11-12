@@ -8,6 +8,7 @@ class Objet {
         
     public :
         Objet();
+        Objet(int p) : poids(p) { };
         
         int getPoids(); 
 };

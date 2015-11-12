@@ -21,3 +21,7 @@ EtatRobot EnCharge::peser() {
 EtatRobot* EnCharge::rencontrerPlot() {
     return EnChargeFacePlot().getInstance();
 }
+
+string EnCharge::getName() {
+	return "En charge";
+}

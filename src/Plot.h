@@ -8,6 +8,7 @@ class Plot {
         
     public :
         Plot();
+        Plot(int h) : hauteur(h) { };
         
         int getHauteur(); 
 };

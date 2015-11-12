@@ -10,6 +10,7 @@ class EnCharge : public EnRoute {
     public:
     	EnCharge() {};
         EnCharge* getInstance();
+        string getName();
         
         EtatRobot avancer();
         EtatRobot* tourner(); 

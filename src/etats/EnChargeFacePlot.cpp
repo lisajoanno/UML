@@ -22,3 +22,6 @@ EtatRobot* EnChargeFacePlot::tourner() {
     return EnCharge().getInstance();
 }
 
+string EnChargeFacePlot::getName() {
+	return "En charge face plot";
+}

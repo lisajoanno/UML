@@ -10,6 +10,7 @@ class EnRoute : public EtatRobot {
     public:
     	EnRoute() {};
         EnRoute* getInstance();
+        string getName();
         
         EtatRobot* figer();
 };

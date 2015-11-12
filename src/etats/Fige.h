@@ -9,6 +9,7 @@ class Fige : public EtatRobot {
     public:
     	Fige() {};
     	Fige* getInstance();
+    	string getName();
 };
 
 #endif

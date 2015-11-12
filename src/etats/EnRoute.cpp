@@ -9,3 +9,7 @@ EnRoute* EnRoute::getInstance() {
 EtatRobot* EnRoute::figer() {
     return Fige().getInstance();
 }
+
+string EnRoute::getName() {
+	return "En route";
+}
