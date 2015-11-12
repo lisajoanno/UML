@@ -2,7 +2,7 @@
 
 EnRoute* EnRoute::instance = new EnRoute();
 
-EtatRobot* EnRoute::getInstance() {
+EnRoute* EnRoute::getInstance() {
     return instance;
 }
 

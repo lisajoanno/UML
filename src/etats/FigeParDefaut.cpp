@@ -2,7 +2,7 @@
 
 FigeParDefaut* FigeParDefaut::instance = new FigeParDefaut();
 
-EtatRobot* FigeParDefaut::getInstance() {
+FigeParDefaut* FigeParDefaut::getInstance() {
     return instance;
 }
 

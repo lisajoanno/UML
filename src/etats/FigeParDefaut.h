@@ -9,7 +9,7 @@ class FigeParDefaut : public Fige {
         static FigeParDefaut* instance;
     public:
     	FigeParDefaut() {};
-        EtatRobot* getInstance();
+        FigeParDefaut* getInstance();
         
         EtatRobot* repartir();
 };

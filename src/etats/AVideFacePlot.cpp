@@ -2,7 +2,7 @@
 
 AVideFacePlot* AVideFacePlot::instance = new AVideFacePlot();
 
-EtatRobot* AVideFacePlot::getInstance() {
+AVideFacePlot* AVideFacePlot::getInstance() {
     return instance;
 }
 

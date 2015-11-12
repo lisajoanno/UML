@@ -8,7 +8,7 @@ class Fige : public EtatRobot {
     	static Fige* instance;
     public:
     	Fige() {};
-    	EtatRobot* getInstance();
+    	Fige* getInstance();
 };
 
 #endif

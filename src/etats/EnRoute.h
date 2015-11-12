@@ -9,7 +9,7 @@ class EnRoute : public EtatRobot {
     	static EnRoute* instance;
     public:
     	EnRoute() {};
-        EtatRobot* getInstance();
+        EnRoute* getInstance();
         
         EtatRobot* figer();
 };

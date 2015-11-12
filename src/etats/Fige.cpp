@@ -2,6 +2,6 @@
 
 Fige* Fige::instance = new Fige();
 
-EtatRobot* Fige::getInstance() {
+Fige* Fige::getInstance() {
     return instance;
 }

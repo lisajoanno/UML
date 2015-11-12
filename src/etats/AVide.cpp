@@ -2,7 +2,7 @@
 
 AVide* AVide::instance = new AVide();
 
-EtatRobot* AVide::getInstance() {
+AVide* AVide::getInstance() {
     return instance;
 }
 

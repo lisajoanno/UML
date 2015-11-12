@@ -2,7 +2,7 @@
 
 EnCharge* EnCharge::instance = new EnCharge();
 
-EtatRobot* EnCharge::getInstance() {
+EnCharge* EnCharge::getInstance() {
     return instance;
 }
 

@@ -10,7 +10,7 @@ class EnChargeFacePlot : public EnRoute {
         static EnChargeFacePlot* instance;
     public:
     	EnChargeFacePlot() {};
-        EtatRobot* getInstance();
+        EnChargeFacePlot* getInstance();
         
         EtatRobot* poser();
         EtatRobot peser(); 

@@ -10,7 +10,7 @@ class AVideFacePlot : public EnRoute {
         static AVideFacePlot* instance;
     public:
     	AVideFacePlot() {};
-        EtatRobot* getInstance();
+        AVideFacePlot* getInstance();
         
         EtatRobot evaluerPlot();
         EtatRobot* saisir();

@@ -2,7 +2,7 @@
 
 EnChargeFacePlot* EnChargeFacePlot::instance = new EnChargeFacePlot();
 
-EtatRobot* EnChargeFacePlot::getInstance() {
+EnChargeFacePlot* EnChargeFacePlot::getInstance() {
     return instance;
 }
 
