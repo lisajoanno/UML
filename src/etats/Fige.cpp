@@ -6,6 +6,10 @@ Fige* Fige::getInstance() {
     return instance;
 }
 
+EtatRobot* Fige::repartir() {
+    return EnRoute().getInstance();
+}
+
 string Fige::getName() {
 	return "Figé";
 }

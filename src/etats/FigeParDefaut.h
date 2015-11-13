@@ -1,7 +1,6 @@
 #ifndef FIGEPARDEFAUT_H
 #define FIGEPARDEFAUT_H
 
-#include "EnRoute.h"
 #include "Fige.h"
 
 class FigeParDefaut : public Fige {
@@ -11,8 +10,7 @@ class FigeParDefaut : public Fige {
     	FigeParDefaut() {};
         FigeParDefaut* getInstance();
         string getName();
-        
-        EtatRobot* repartir();
+
 };
 
 #endif

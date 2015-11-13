@@ -1,6 +1,7 @@
 #ifndef FIGE_H
 #define FIGE_H
 
+#include "EnRoute.h"
 #include "../EtatRobot.h"
 
 class Fige : public EtatRobot {
@@ -10,6 +11,8 @@ class Fige : public EtatRobot {
     	Fige() {};
     	Fige* getInstance();
     	string getName();
+
+        EtatRobot* repartir();
 };
 
 #endif
