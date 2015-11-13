@@ -1,3 +1,11 @@
+/**********
+
+Classe Position
+
+Caractérise la position du robot par une abscisse et une ordonnée.
+
+**********/
+
 #ifndef POSITION_H
 #define POSITION_H
 

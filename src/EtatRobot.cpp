@@ -1,13 +1,29 @@
 #include "EtatRobot.h"
 #include "RobotException.h"
 
+/**************
+  Constructeur
+**************/
+
 EtatRobot::EtatRobot() {
 }
         
+/**************
+  Accesseurs
+**************/
+
 EtatRobot* EtatRobot::getInstance() {
     // Ma foi ça vire le warning :/
     return this;
 }
+
+string EtatRobot::getName() {
+    return "";
+}
+
+/**************
+  Méthodes
+**************/
 
 EtatRobot EtatRobot::avancer() {
     throw RobotException();
@@ -47,8 +63,4 @@ EtatRobot* EtatRobot::repartir() {
 
 EtatRobot EtatRobot::afficher() {
     throw RobotException();
-}
-
-string EtatRobot::getName() {
-	return "";
 }

@@ -1,5 +1,9 @@
 #include "Position.h"
 
+/**************
+  Constructeur
+**************/
+
 Position::Position() {
     x = 0;
     y = 0;
@@ -9,6 +13,10 @@ Position::Position(int x1, int y1) {
     x = x1;
     y = y1;
 }
+
+/**************
+  Accesseurs et modificateurs
+**************/
 
 int Position::getX() {
     return x;

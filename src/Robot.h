@@ -1,3 +1,14 @@
+/**********
+
+Classe Robot
+
+Cette classe est l'objet de la modélisation. 
+Un Robot peut effectuer plusieurs actions telles que avancer, tourner, saisir un objet... 
+Il contient également des caractéristiques : une direction, une position, un plot (lorsqu'il se trouve face à un plot),
+un objet (lorsqu'il en a saisi un), et son état.
+
+**********/
+
 #ifndef ROBOT_H
 #define ROBOT_H
 

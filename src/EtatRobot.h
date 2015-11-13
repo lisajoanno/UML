@@ -1,3 +1,11 @@
+/**********
+
+Classe EtatRobot
+
+L'état de la machine Robot. Cette classe sera dérivée en autant d'états que la machine peut en prendre.
+
+**********/
+
 #ifndef ETATROBOT_H
 #define ETATROBOT_H
 

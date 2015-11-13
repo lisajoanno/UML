@@ -1,5 +1,9 @@
 #include "Robot.h"
 
+/**************
+  Constructeur
+**************/
+
 /* Constructeur vide */
 Robot::Robot() {
 	direction = "";
@@ -7,9 +11,12 @@ Robot::Robot() {
 	position.setY(0);
 	plot = Plot();
 	objet = Objet();
-	//AVide* avide = AVide().getInstance();
 	etat = AVide().getInstance();
 }
+
+/**************
+  Accesseurs
+**************/
 
 string Robot::getDirection() {
 	return direction;
@@ -31,9 +38,10 @@ EtatRobot* Robot::getEtat() {
 	return etat;
 }
 
-/*
-**	Methodes
-*/
+/**************
+  Méthodes
+**************/
+
 void Robot::avancer(int x, int y) {
 	try {
 		etat->avancer();

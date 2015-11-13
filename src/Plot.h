@@ -1,3 +1,11 @@
+/**********
+
+Classe Plot
+
+Caractérise un plot par sa hauteur sur le terrain plan.
+
+**********/
+
 #ifndef PLOT_H
 #define PLOT_H
 
