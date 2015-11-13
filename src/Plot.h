@@ -3,14 +3,14 @@
 
 class Plot {
     
-    private :
-        int hauteur;
+private :
+    int hauteur;
         
-    public :
-        Plot();
-        Plot(int h) : hauteur(h) { };
+public :
+    Plot();
+    Plot(int h) : hauteur(h) { };
         
-        int getHauteur(); 
+    int getHauteur(); 
 };
 
 #endif

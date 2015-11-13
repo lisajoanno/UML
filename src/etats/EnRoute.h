@@ -5,14 +5,15 @@
 #include "Fige.h"
 
 class EnRoute : public EtatRobot {
-    private:
-    	static EnRoute* instance;
-    public:
-    	EnRoute() {};
-        EnRoute* getInstance();
-        string getName();
+
+private:
+   	static EnRoute* instance;
+public:
+  	EnRoute() {};
+    EnRoute* getInstance();
+    string getName();
         
-        EtatRobot* figer();
+    EtatRobot* figer();
 };
 
 #endif

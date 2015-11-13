@@ -6,17 +6,19 @@
 #include "EnCharge.h"
 
 class EnChargeFacePlot : public EnRoute {
-    private:
-        static EnChargeFacePlot* instance;
-    public:
-    	EnChargeFacePlot() {};
-        EnChargeFacePlot* getInstance();
-        string getName();
+
+private:
+    static EnChargeFacePlot* instance;
+    
+public:
+ 	EnChargeFacePlot() {};
+    EnChargeFacePlot* getInstance();
+    string getName();
         
-        EtatRobot* poser();
-        EtatRobot peser(); 
-        EtatRobot evaluerPlot();
-        EtatRobot* tourner();
+    EtatRobot* poser();
+    EtatRobot peser(); 
+    EtatRobot evaluerPlot();
+    EtatRobot* tourner();
 };
 
 #endif

@@ -8,26 +8,24 @@ using namespace std;
 
 class EtatRobot {
     
-    private :
+private :
     
-    public :
-        EtatRobot();
-        EtatRobot* getInstance();
-        virtual string getName();
+public :
+    EtatRobot();
+    EtatRobot* getInstance();
+    virtual string getName();
 
-        virtual EtatRobot avancer();
-        virtual EtatRobot evaluerPlot();
-        virtual EtatRobot peser();
+    virtual EtatRobot avancer();
+    virtual EtatRobot evaluerPlot();
+    virtual EtatRobot peser();
+    virtual EtatRobot* tourner();
+    virtual EtatRobot* saisir();
+    virtual EtatRobot* poser();
+    virtual EtatRobot* rencontrerPlot();
+    virtual EtatRobot* figer();
+    virtual EtatRobot* repartir();
 
-        virtual EtatRobot* tourner();
-        virtual EtatRobot* saisir();
-        virtual EtatRobot* poser();
-        virtual EtatRobot* rencontrerPlot();
-        virtual EtatRobot* figer();
-        virtual EtatRobot* repartir();
-
-        EtatRobot afficher();
-
+    EtatRobot afficher();
 };
 
 #endif

@@ -3,14 +3,14 @@
 
 class Objet {
     
-    private :
-        int poids;
+private :
+    int poids;
         
-    public :
-        Objet();
-        Objet(int p) : poids(p) { };
-        
-        int getPoids(); 
+public :
+    Objet();
+    Objet(int p) : poids(p) { };
+    
+   int getPoids(); 
 };
 
 #endif

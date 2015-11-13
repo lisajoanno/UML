@@ -2,8 +2,8 @@
 #define ROBOTEXCEPTION_H
 
 class RobotException {
-    public:
-        RobotException();
+public:
+    RobotException();
 };
 
 #endif

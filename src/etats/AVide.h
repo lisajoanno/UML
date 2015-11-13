@@ -5,17 +5,18 @@
 #include "AVideFacePlot.h"
 
 class AVide : public EnRoute {
-    private:
-        static AVide* instance;
-    public:       
-    	AVide() {}; 
-        AVide* getInstance();
-        string getName();
-        
-        EtatRobot avancer();
-        EtatRobot* tourner();
-        EtatRobot* rencontrerPlot();
 
+private:
+    static AVide* instance;
+
+public:       
+    AVide() {}; 
+    AVide* getInstance();
+    string getName();
+        
+    EtatRobot avancer();
+    EtatRobot* tourner();
+    EtatRobot* rencontrerPlot();
 };
 
 #endif

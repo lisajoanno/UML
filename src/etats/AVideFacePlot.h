@@ -6,16 +6,18 @@
 #include "EnChargeFacePlot.h"
 
 class AVideFacePlot : public EnRoute {
-    private:
-        static AVideFacePlot* instance;
-    public:
-    	AVideFacePlot() {};
-        AVideFacePlot* getInstance();
-        string getName();
+
+private:
+    static AVideFacePlot* instance;
+    
+public:
+	AVideFacePlot() {};
+    AVideFacePlot* getInstance();
+    string getName();
         
-        EtatRobot evaluerPlot();
-        EtatRobot* saisir();
-        EtatRobot* tourner();
+    EtatRobot evaluerPlot();
+    EtatRobot* saisir();
+    EtatRobot* tourner();
 };
 
 #endif
