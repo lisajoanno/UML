@@ -36,5 +36,14 @@ int main() {
 
     robot.repartir();
 
+    robot.avancer(1,2);
+
+    robot.poser();
+
+    robot.tourner(Direction::E);
+
+    Plot plot3(5);
+    robot.rencontrerPlot(plot2);
+
     return 0;
 }

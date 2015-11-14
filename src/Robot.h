@@ -33,9 +33,10 @@ private :
 	Plot plot;
 	Objet objet;
 	EtatRobot* etat;
+	EtatRobot* etatPrecedent;
 	Afficheur* afficheur;
 	string ordre;
-
+	
 public :
 	Robot();
 

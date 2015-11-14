@@ -13,6 +13,7 @@ Robot::Robot() {
 	plot = Plot();
 	objet = Objet();
 	etat = AVide().getInstance();
+	etatPrecedent = AVide().getInstance();
 	AfficheurConcret *aff;
     aff = new AfficheurConcret(this);
 	afficheur=aff;
@@ -135,6 +136,7 @@ int Robot::evaluerPlot() {
 void Robot::figer() {
 	try {
 		ordre = "figer";
+		etatPrecedent = getEtat();
 		etat = etat->figer();
 		afficher();
 	} catch(RobotException e) { };
@@ -145,6 +147,7 @@ void Robot::repartir() {
 	try {
 		ordre = "repartir";
 		etat = etat->repartir();
+		etat = etatPrecedent;
 		afficher();
 	} catch(RobotException e) { };
 }
