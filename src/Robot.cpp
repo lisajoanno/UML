@@ -14,7 +14,7 @@ Robot::Robot() {
 	objet = Objet();
 	etat = AVide().getInstance();
 	AfficheurConcret *aff;
-    aff = new AfficheurConcret;
+    aff = new AfficheurConcret(this);
 	afficheur=aff;
 }
 
@@ -126,5 +126,5 @@ void Robot::afficher() {
 }
 
 void Robot::notifie() {
-	afficheur->miseAJour(this);
+	afficheur->miseAJour();
 }

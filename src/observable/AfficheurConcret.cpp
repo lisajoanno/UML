@@ -1,11 +1,11 @@
 #include "AfficheurConcret.h"
 
-void AfficheurConcret::miseAJour(Robot* er) {
+void AfficheurConcret::miseAJour() {
 	cout << "------------" << endl;
-	cout << "Etat : " << er->getEtat()->getInstance()->getName() << endl;
-	cout << "Position : (" << er->getPosition().getX() << "," << er->getPosition().getY() << ")" << endl;
-	cout << "Direction : " << er->getDirection() << endl;
-	cout << "Poids de mon objet : " << er->getObjet().getPoids() << endl;
-	cout << "Hauteur du plot : " << er->getPlot().getHauteur() << endl;
+	cout << "Etat : " << robot->getEtat()->getInstance()->getName() << endl;
+	cout << "Position : (" << robot->getPosition().getX() << "," << robot->getPosition().getY() << ")" << endl;
+	cout << "Direction : " << robot->getDirection() << endl;
+	cout << "Poids de mon objet : " << robot->getObjet().getPoids() << endl;
+	cout << "Hauteur du plot : " << robot->getPlot().getHauteur() << endl;
 	cout << "------------" << endl;
 }

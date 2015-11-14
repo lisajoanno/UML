@@ -7,11 +7,11 @@ class Robot;
 class AfficheurConcret : public Afficheur {
 
 private:
-
+	Robot* robot;
 public:
-	AfficheurConcret() {};
+	AfficheurConcret(Robot* er) : robot(er) {};
 
-	void miseAJour(Robot* er);
+	void miseAJour();
 };
 
 #endif

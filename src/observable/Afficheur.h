@@ -11,7 +11,7 @@ private:
 public:
 	Afficheur() {};
 
-	virtual void miseAJour(Robot* er);
+	virtual void miseAJour();
 };
 
 #endif
