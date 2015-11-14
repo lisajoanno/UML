@@ -59,7 +59,3 @@ EtatRobot* EtatRobot::figer() {
 EtatRobot* EtatRobot::repartir() {
     throw RobotException();
 }
-
-EtatRobot EtatRobot::afficher() {
-    throw RobotException();
-}

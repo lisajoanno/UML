@@ -1,3 +1,12 @@
+/**********
+
+Classe Fige
+
+Cette classe est un singleton modélise un état possible du robot. 
+Dans cet état, le robot peut repartir (ce qui l'amène à EnRoute).
+
+**********/
+
 #ifndef FIGE_H
 #define FIGE_H
 

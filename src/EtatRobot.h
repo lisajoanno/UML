@@ -32,8 +32,6 @@ public :
     virtual EtatRobot* rencontrerPlot();
     virtual EtatRobot* figer();
     virtual EtatRobot* repartir();
-
-    EtatRobot afficher();
 };
 
 #endif

@@ -55,7 +55,6 @@ public :
 	void figer();
 	void repartir();
 	void afficher();
-	void notifie();
 };
 
 #endif

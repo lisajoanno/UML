@@ -1,3 +1,12 @@
+/**********
+
+Classe EnChargeFacePlot
+
+Cette classe est un singleton modélise un état possible du robot. Elle hérite de l'état en route.
+Dans cet état, le robot peut peser, évaluer un plot, tourner (ce qui l'amène à EnCharge) et poser (ce qui l'amène à AVideFacePlot).
+
+**********/
+
 #ifndef ENCHARGEFACEPLOT_H
 #define ENCHARGEFACEPLOT_H
 
