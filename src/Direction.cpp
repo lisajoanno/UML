@@ -1,6 +1,18 @@
 #include "Direction.h"
 
-void Direction::afficher(Direction::ENDirection d) {
-	string t[] = {"Nord", "Sud", "Est", "Ouest"};
-	cout << "Position : " << t[d];
+/**************
+  Accesseurs
+**************/
+
+// Convertit les objets de l'enum en string pour un affichage quelconque.
+string Direction::getString(Direction::ENDirection d) {
+	switch (d)
+    {
+        case N: return "Nord";
+        case S: return "Sud";
+        case E: return "Est";
+        case O: return "Ouest";
+        default: return "";
+    }
+    return "";
 }
