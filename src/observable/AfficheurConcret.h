@@ -1,3 +1,11 @@
+/**********
+
+Classe AfficheurConcret
+
+Classe qui hérite d'afficheur. C'est l'afficheur de notre simulation de robot sur la sortie standard. Elle affiche simplement l'ordre reçu, l'état courant du robot, sa position, sa direction, son plot et l'objet qu'il porte.
+
+**********/
+
 #ifndef AFFICHEURCONCRET_H
 #define AFFICHEURCONCRET_H
 

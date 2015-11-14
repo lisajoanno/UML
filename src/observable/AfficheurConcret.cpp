@@ -1,5 +1,10 @@
 #include "AfficheurConcret.h"
 
+/**************
+  Méthodes
+**************/
+
+// Affichage sur la sortie standard des caractéristiques du robot grâce à ses accesseurs
 void AfficheurConcret::miseAJour() {
 	cout << "------------" << endl;
 	cout << "Ordre reçu : " << robot->getOrdre() << endl;
