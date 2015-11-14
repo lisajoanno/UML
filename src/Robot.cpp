@@ -73,6 +73,7 @@ void Robot::tourner(Direction::ENDirection d) {
 	try {
 		ordre = "tourner";
 		etat = etat->tourner();
+		plot = Plot();
 		direction = d;
 		afficher();
 	} catch(RobotException e) { };
@@ -93,6 +94,7 @@ void Robot::poser() {
 	try {
 		ordre = "poser";
 		etat = etat->poser();
+		objet = Objet();
 		afficher();
 	} catch(RobotException e) { };
 }

@@ -7,7 +7,7 @@ int main() {
 
     robot.avancer(2,3);
 
-	Plot plot;
+	Plot plot(22);
     robot.rencontrerPlot(plot);
 
     robot.tourner(Direction::N);
