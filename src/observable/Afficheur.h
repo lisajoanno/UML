@@ -1,8 +1,8 @@
 #ifndef AFFICHEUR_H
 #define AFFICHEUR_H
 
-#include "../EtatRobot.h"
 #include "../RobotException.h"
+#include "../Robot.h"
 
 class Afficheur {
 
@@ -11,7 +11,7 @@ private:
 public:
 	Afficheur() {};
 
-	virtual void miseAJour(EtatRobot* er);
+	virtual void miseAJour(Robot* er);
 };
 
 #endif

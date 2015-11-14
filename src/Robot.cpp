@@ -1,5 +1,5 @@
 #include "Robot.h"
-
+#include "observable/AfficheurConcret.h"
 
 /**************
   Constructeur
@@ -13,7 +13,9 @@ Robot::Robot() {
 	plot = Plot();
 	objet = Objet();
 	etat = AVide().getInstance();
-	afficheur = AfficheurConcret();
+	AfficheurConcret *aff;
+    aff = new AfficheurConcret;
+	afficheur=aff;
 }
 
 /**************
@@ -124,5 +126,5 @@ void Robot::afficher() {
 }
 
 void Robot::notifie() {
-	afficheur.miseAJour(getEtat());
+	afficheur->miseAJour(this);
 }

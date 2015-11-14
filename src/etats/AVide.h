@@ -11,7 +11,7 @@ private:
 
 public:       
     AVide() {}; 
-    AVide* getInstance();
+    static AVide* getInstance();
     string getName();
         
     EtatRobot avancer();

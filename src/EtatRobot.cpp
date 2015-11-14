@@ -13,7 +13,6 @@ EtatRobot::EtatRobot() {
 **************/
 
 EtatRobot* EtatRobot::getInstance() {
-    // Ma foi ça vire le warning :/
     return this;
 }
 

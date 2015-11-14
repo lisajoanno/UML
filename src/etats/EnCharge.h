@@ -11,7 +11,7 @@ private:
 
 public:
 	EnCharge() {};
-    EnCharge* getInstance();
+    static EnCharge* getInstance();
     string getName();
         
     EtatRobot avancer();

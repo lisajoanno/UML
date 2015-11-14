@@ -20,8 +20,7 @@ un objet (lorsqu'il en a saisi un), et son état.
 #include "RobotException.h"
 #include "etats/AVide.h"
 
-#include "observable/Afficheur.h"
-#include "observable/AfficheurConcret.h"
+class AfficheurConcret;
 
 using namespace std;
 
@@ -33,7 +32,7 @@ private :
 	Plot plot;
 	Objet objet;
 	EtatRobot* etat;
-	AfficheurConcret afficheur;
+	AfficheurConcret* afficheur;
 
 public :
 	Robot();

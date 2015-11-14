@@ -10,7 +10,7 @@ private:
 	static Fige* instance;
 public:
 	Fige() {};
-	Fige* getInstance();
+	static Fige* getInstance();
 	string getName();
 
     EtatRobot* repartir();

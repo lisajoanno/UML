@@ -12,7 +12,7 @@ private:
     
 public:
  	EnChargeFacePlot() {};
-    EnChargeFacePlot* getInstance();
+    static EnChargeFacePlot* getInstance();
     string getName();
         
     EtatRobot* poser();

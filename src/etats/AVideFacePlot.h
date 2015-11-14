@@ -12,7 +12,7 @@ private:
     
 public:
 	AVideFacePlot() {};
-    AVideFacePlot* getInstance();
+    static AVideFacePlot* getInstance();
     string getName();
         
     EtatRobot evaluerPlot();

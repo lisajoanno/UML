@@ -10,7 +10,7 @@ private:
    	static EnRoute* instance;
 public:
   	EnRoute() {};
-    EnRoute* getInstance();
+    static EnRoute* getInstance();
     string getName();
         
     EtatRobot* figer();
