@@ -2,6 +2,7 @@
 
 void AfficheurConcret::miseAJour() {
 	cout << "------------" << endl;
+	cout << "Ordre reçu : " << robot->getOrdre() << endl;
 	cout << "Etat : " << robot->getEtat()->getInstance()->getName() << endl;
 	cout << "Position : (" << robot->getPosition().getX() << "," << robot->getPosition().getY() << ")" << endl;
 	cout << "Direction : " << robot->getDirection() << endl;

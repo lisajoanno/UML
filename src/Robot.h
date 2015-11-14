@@ -33,6 +33,7 @@ private :
 	Objet objet;
 	EtatRobot* etat;
 	AfficheurConcret* afficheur;
+	string ordre;
 
 public :
 	Robot();
@@ -42,6 +43,7 @@ public :
 	Plot getPlot();
 	Objet getObjet();
 	EtatRobot* getEtat();
+	string getOrdre();
 
 	void avancer(int x, int y);
 	void tourner(string d);

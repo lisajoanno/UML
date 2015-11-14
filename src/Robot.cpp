@@ -16,6 +16,7 @@ Robot::Robot() {
 	AfficheurConcret *aff;
     aff = new AfficheurConcret(this);
 	afficheur=aff;
+	ordre = "";
 }
 
 /**************
@@ -42,12 +43,17 @@ EtatRobot* Robot::getEtat() {
 	return etat;
 }
 
+string Robot::getOrdre() {
+	return ordre;
+}
+
 /**************
   Méthodes
 **************/
 
 void Robot::avancer(int x, int y) {
 	try {
+		ordre = "avancer";
 		etat->avancer();
 		position.setX(x);
 		position.setY(y);
@@ -57,6 +63,7 @@ void Robot::avancer(int x, int y) {
 
 void Robot::tourner(string d) {
 	try {
+		ordre = "tourner";
 		etat = etat->tourner();
 		direction = d;
 		notifie();
@@ -65,6 +72,7 @@ void Robot::tourner(string d) {
 
 void Robot::saisir(Objet o) {
 	try {
+		ordre = "saisir";
 		etat = etat->saisir();
 		objet = o;
 		notifie();
@@ -73,6 +81,7 @@ void Robot::saisir(Objet o) {
 
 void Robot::poser() {
 	try {
+		ordre = "poser";
 		etat = etat->poser();
 		notifie();
 	} catch(RobotException e) { };
@@ -80,6 +89,7 @@ void Robot::poser() {
 
 int Robot::peser() {
 	try {
+		ordre = "peser";
 		etat->peser();
 		notifie();
 		return objet.getPoids();
@@ -89,6 +99,7 @@ int Robot::peser() {
 
 void Robot::rencontrerPlot(Plot p) {
 	try {
+		ordre = "rencontrer plot";
 		etat = etat->rencontrerPlot();
 		plot = p;
 		notifie();
@@ -97,6 +108,7 @@ void Robot::rencontrerPlot(Plot p) {
 
 int Robot::evaluerPlot() {
 	try {
+		ordre = "evaluer plot";
 		etat->evaluerPlot();
 		return plot.getHauteur();
 		notifie();
@@ -106,6 +118,7 @@ int Robot::evaluerPlot() {
 
 void Robot::figer() {
 	try {
+		ordre = "figer";
 		etat = etat->figer();
 		notifie();
 	} catch(RobotException e) { };
@@ -113,6 +126,7 @@ void Robot::figer() {
 
 void Robot::repartir() {
 	try {
+		ordre = "repartir";
 		etat = etat->repartir();
 		notifie();
 	} catch(RobotException e) { };
@@ -120,6 +134,7 @@ void Robot::repartir() {
 
 void Robot::afficher() {
 	try {
+		ordre = "afficher";
 		etat->afficher();
 		notifie();
 	} catch(RobotException e) { };
