@@ -1,12 +1,17 @@
-#include <iostream>
-#include "../Robot.h"
+#ifndef AFFICHEUR_H
+#define AFFICHEUR_H
+
+#include "../EtatRobot.h"
+#include "../RobotException.h"
 
 class Afficheur {
 
 private:
 
 public:
-	Afficheur();
-	void MiseAJour(Robot r);
+	Afficheur() {};
 
+	virtual void miseAJour(EtatRobot* er);
 };
+
+#endif

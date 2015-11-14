@@ -1,3 +1,6 @@
+#ifndef AFFICHEURCONCRET_H
+#define AFFICHEURCONCRET_H
+
 #include "Afficheur.h"
 
 class AfficheurConcret : public Afficheur {
@@ -5,7 +8,9 @@ class AfficheurConcret : public Afficheur {
 private:
 
 public:
-	AfficheurConcret();
-	void MiseAJour(Robot r);
+	AfficheurConcret() {};
 
+	void miseAJour(EtatRobot* er);
 };
+
+#endif

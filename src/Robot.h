@@ -12,15 +12,16 @@ un objet (lorsqu'il en a saisi un), et son état.
 #ifndef ROBOT_H
 #define ROBOT_H
 
+#include <iostream>
 #include "Objet.h"
 #include "Plot.h"
 #include "Position.h"
 #include "EtatRobot.h"
 #include "RobotException.h"
-
 #include "etats/AVide.h"
 
-#include <iostream>
+#include "observable/Afficheur.h"
+#include "observable/AfficheurConcret.h"
 
 using namespace std;
 
@@ -32,6 +33,8 @@ private :
 	Plot plot;
 	Objet objet;
 	EtatRobot* etat;
+	AfficheurConcret afficheur;
+
 public :
 	Robot();
 
@@ -51,6 +54,7 @@ public :
 	void figer();
 	void repartir();
 	void afficher();
+	void notifie();
 };
 
 #endif

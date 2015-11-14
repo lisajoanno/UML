@@ -1,5 +1,6 @@
 #include "Robot.h"
 
+
 /**************
   Constructeur
 **************/
@@ -12,6 +13,7 @@ Robot::Robot() {
 	plot = Plot();
 	objet = Objet();
 	etat = AVide().getInstance();
+	afficheur = AfficheurConcret();
 }
 
 /**************
@@ -47,6 +49,7 @@ void Robot::avancer(int x, int y) {
 		etat->avancer();
 		position.setX(x);
 		position.setY(y);
+		notifie();
 	} catch(RobotException e) { };
 }
 
@@ -54,6 +57,7 @@ void Robot::tourner(string d) {
 	try {
 		etat = etat->tourner();
 		direction = d;
+		notifie();
 	} catch(RobotException e) { };
 }
 
@@ -61,19 +65,21 @@ void Robot::saisir(Objet o) {
 	try {
 		etat = etat->saisir();
 		objet = o;
+		notifie();
 	} catch (RobotException e) { };
 }
 
 void Robot::poser() {
 	try {
 		etat = etat->poser();
-		//objet = NULL;
+		notifie();
 	} catch(RobotException e) { };
 }
 
 int Robot::peser() {
 	try {
 		etat->peser();
+		notifie();
 		return objet.getPoids();
 	} catch(RobotException()) {	};
 	return -1;
@@ -83,6 +89,7 @@ void Robot::rencontrerPlot(Plot p) {
 	try {
 		etat = etat->rencontrerPlot();
 		plot = p;
+		notifie();
 	} catch(RobotException e) { };
 }
 
@@ -90,6 +97,7 @@ int Robot::evaluerPlot() {
 	try {
 		etat->evaluerPlot();
 		return plot.getHauteur();
+		notifie();
 	} catch(RobotException e) { };
 	return -1;
 }
@@ -97,17 +105,24 @@ int Robot::evaluerPlot() {
 void Robot::figer() {
 	try {
 		etat = etat->figer();
+		notifie();
 	} catch(RobotException e) { };
 }
 
 void Robot::repartir() {
 	try {
 		etat = etat->repartir();
+		notifie();
 	} catch(RobotException e) { };
 }
 
 void Robot::afficher() {
 	try {
 		etat->afficher();
+		notifie();
 	} catch(RobotException e) { };
+}
+
+void Robot::notifie() {
+	afficheur.miseAJour(getEtat());
 }

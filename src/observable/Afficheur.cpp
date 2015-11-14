@@ -1,6 +1,5 @@
 #include "Afficheur.h"
-#include "../RobotException.h"
 
-void Afficheur::MiseAJour(Robot r) {
+void Afficheur::miseAJour(EtatRobot* er) {
 	throw RobotException();
 }
