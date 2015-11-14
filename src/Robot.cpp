@@ -7,7 +7,7 @@
 
 /* Constructeur vide, Robot en position (0,0), plot, objet vide, état à vide.*/
 Robot::Robot() {
-	direction = "";
+	direction = Direction::N;
 	position.setX(0);
 	position.setY(0);
 	plot = Plot();
@@ -24,7 +24,7 @@ Robot::Robot() {
 **************/
 
 // Accesseur de la direction
-string Robot::getDirection() {
+Direction::ENDirection Robot::getDirection() {
 	return direction;
 }
 
@@ -69,7 +69,7 @@ void Robot::avancer(int x, int y) {
 }
 
 // Fait tourner dans une direction.
-void Robot::tourner(string d) {
+void Robot::tourner(Direction::ENDirection d) {
 	try {
 		ordre = "tourner";
 		etat = etat->tourner();

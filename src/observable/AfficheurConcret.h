@@ -2,6 +2,7 @@
 #define AFFICHEURCONCRET_H
 
 #include "Afficheur.h"
+
 class Robot;
 
 class AfficheurConcret : public Afficheur {

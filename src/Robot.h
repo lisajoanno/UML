@@ -19,6 +19,7 @@ un objet (lorsqu'il en a saisi un), et son état.
 #include "EtatRobot.h"
 #include "RobotException.h"
 #include "etats/AVide.h"
+#include "Direction.h"
 
 class Afficheur;
 
@@ -27,7 +28,7 @@ using namespace std;
 class Robot {
 
 private :
-	string direction;
+	Direction::ENDirection direction;
 	Position position;
 	Plot plot;
 	Objet objet;
@@ -38,7 +39,7 @@ private :
 public :
 	Robot();
 
-	string getDirection();
+	Direction::ENDirection getDirection();
 	Position getPosition();
 	Plot getPlot();
 	Objet getObjet();
@@ -46,7 +47,7 @@ public :
 	string getOrdre();
 
 	void avancer(int x, int y);
-	void tourner(string d);
+	void tourner(Direction::ENDirection d);
 	void saisir(Objet o);
 	void poser();
 	int peser();

@@ -10,7 +10,7 @@ int main() {
 	Plot plot;
     robot.rencontrerPlot(plot);
 
-    robot.tourner("N");
+    robot.tourner(Direction::N);
 
     robot.poser();
 
@@ -28,11 +28,11 @@ int main() {
 
     robot.evaluerPlot();
 
-    robot.tourner("W");
+    robot.tourner(Direction::O);
 
     robot.figer();
 
-    robot.tourner("S");
+    robot.tourner(Direction::S);
 
     robot.repartir();
 
