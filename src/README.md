@@ -11,10 +11,10 @@ Le dossier observable/ contient les classes spécifiques à l'affichage.
 # Compiler
 
 Ce projet contient un makefile.
-Générer les .o, utiliser la commande make
+Pour générer les .o, utiliser la commande make
 Pour les supprimer, utiliser la commande make clean
 Pour exécuter le programme, générer les .o et utiliser la commande ./robot
 
 # Exécution du programme
 
-Le main donne au robot plusieurs ordres. Certains ordres n'apparaissent pas, car ils sont illégaux à exécuter dans l'état courant du robot.
+Le main donne au robot plusieurs ordres. Certains ordres n'apparaissent pas, car l'état courant du robot ne permet pas leur exécution.
