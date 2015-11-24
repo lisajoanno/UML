@@ -23,7 +23,6 @@ private :
 public :
     virtual void execute();
     virtual void desexecute();
-
 };
 
 #endif

@@ -23,7 +23,6 @@ private :
 public :
 	Invocateur();
 	void invoquer();
-
 };
 
 #endif

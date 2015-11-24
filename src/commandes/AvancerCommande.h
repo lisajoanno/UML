@@ -20,8 +20,9 @@ public :
 	AvancerCommande() {
 		cout << "salut" << endl;
 	};
+	
 	void execute();
-
+	void desexecute();
 };
 
 #endif

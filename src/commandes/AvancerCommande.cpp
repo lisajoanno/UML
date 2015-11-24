@@ -3,5 +3,9 @@
 
 
 void AvancerCommande::execute() {
-	//return new AvancerCommande();
+	robot.avancer(x,y);
+}
+
+void AvancerCommande::desexecute() {
+	cout << "oijzfr" << endl;
 }
