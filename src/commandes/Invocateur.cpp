@@ -1,7 +1,7 @@
 #include "Invocateur.h"
 #include "Commande.h"
 
-map<string, Commande*>Commande::mc;
+//map<string, Commande*>Commande::mc;
 
 Invocateur::Invocateur() {
 }
@@ -9,8 +9,8 @@ Invocateur::Invocateur() {
 void Invocateur::invoquer() {
     string in;
     cin >> in;
-    //Commande::mc[in]->execute();
-    cout << "Vous avez lancé : " << in;
+    Commande::mc[in]->execute();
+    cout << "Vous avez lancé : " << in << endl;
 }
 
 int Invocateur::getIn() {

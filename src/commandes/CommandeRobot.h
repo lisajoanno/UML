@@ -12,10 +12,11 @@ Classe Commande
 #include <map>
 #include "Commande.h"
 #include "../Robot.h"
+#include "Invocateur.h"
 
 using namespace std;
 
-class Invocateur;
+//class Invocateur;
 
 class CommandeRobot : public Commande {
 
@@ -28,8 +29,8 @@ public :
 
 	CommandeRobot(Invocateur* inv) : i(inv) {};
 
-    virtual void execute();
-    virtual void desexecute();
+    virtual void execute() {};
+    virtual void desexecute() {};
 };
 
 #endif

@@ -2,8 +2,10 @@
 
 #include "AvancerCommande.h"
 
+map<string,Commande*> Commande::mc = { {"AVANCER", new AvancerCommande()} };
+
 Commande::Commande() {
-	map<string,Commande*> mc = { {"AVANCER", new AvancerCommande()} };
+	
 }
 
 void Commande::execute() {

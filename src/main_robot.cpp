@@ -4,14 +4,13 @@
 int main() {
 
     cout << "Simulation de robot ! " << endl;
-    Robot robot;
+    //Robot robot;
 
 	Invocateur iv;
     iv.invoquer();
 
-
-
-
+    /**
+    // pour ne pas que le premier ordre soit d'avancer
     robot.avancer(2,3);
 
 	Plot plot(22);
@@ -51,6 +50,6 @@ int main() {
 
     Plot plot3(5);
     robot.rencontrerPlot(plot2);
-
+    */
     return 0;
 }

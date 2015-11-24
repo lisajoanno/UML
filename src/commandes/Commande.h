@@ -14,9 +14,7 @@ Classe Commande
 #include "../RobotException.h"
 
 class Commande {
-
-protected:
-
+	
 public :
 	Commande();
 	

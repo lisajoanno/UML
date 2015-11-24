@@ -10,7 +10,6 @@ Classe Invocateur
 #define INVOCATEUR_H
 
 #include "Commande.h"
-#include "AvancerCommande.h"
 
 using namespace std;
 
