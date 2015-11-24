@@ -15,6 +15,8 @@ Classe Commande
 
 class Commande {
 
+protected:
+
 public :
 	Commande();
 	

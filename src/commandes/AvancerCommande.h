@@ -18,6 +18,7 @@ private :
 	
 public :
 	AvancerCommande() {};
+	AvancerCommande(Invocateur* inv);
 	
 	void execute();
 	void desexecute();

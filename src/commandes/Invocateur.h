@@ -21,6 +21,7 @@ private :
 public :
 	Invocateur();
 	void invoquer();
+	int getIn();
 };
 
 #endif

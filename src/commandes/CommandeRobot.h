@@ -15,13 +15,18 @@ Classe Commande
 
 using namespace std;
 
+class Invocateur;
+
 class CommandeRobot : public Commande {
 
 public :
 	Robot robot;
+	Invocateur* i;
 
 public :
 	CommandeRobot() {};
+
+	CommandeRobot(Invocateur* inv) : i(inv) {};
 
     virtual void execute();
     virtual void desexecute();
