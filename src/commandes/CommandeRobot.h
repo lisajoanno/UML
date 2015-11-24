@@ -31,6 +31,10 @@ public :
 
     virtual void execute() {};
     virtual void desexecute() {};
+
+    CommandeRobot(string d);
+    CommandeRobot(string d, Invocateur* inv);
+    static map<string,CommandeRobot*>& commEffectuees();
 };
 
 #endif

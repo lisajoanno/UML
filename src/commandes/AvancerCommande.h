@@ -17,11 +17,14 @@ private :
 	int x, y;
 	
 public :
-	AvancerCommande() {};
-	AvancerCommande(Invocateur* inv);
+	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {};
+	AvancerCommande() : CommandeRobot("AvancerCommande") {};
+	//AvancerCommande(Invocateur* inv);
 	
 	void execute();
 	void desexecute();
+
+	static AvancerCommande avancerCommande;
 };
 
 #endif
