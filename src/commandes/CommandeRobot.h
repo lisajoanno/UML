@@ -17,10 +17,12 @@ using namespace std;
 
 class CommandeRobot : public Commande {
 
-private :
+public :
 	Robot robot;
 
 public :
+	CommandeRobot() {};
+
     virtual void execute();
     virtual void desexecute();
 };

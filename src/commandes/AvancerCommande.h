@@ -17,9 +17,7 @@ private :
 	int x, y;
 	
 public :
-	AvancerCommande() {
-		cout << "salut" << endl;
-	};
+	AvancerCommande() {};
 	
 	void execute();
 	void desexecute();

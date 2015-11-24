@@ -1,14 +1,13 @@
 #include "Invocateur.h"
-#include "AvancerCommande.h"
+#include "Commande.h"
 
 Invocateur::Invocateur() {
-	//AvancerCommande *av = new AvancerCommande();
-	//map<string,Commande*> mc = { {"AVANCER", av} };
+	
 }
 
 void Invocateur::invoquer() {
     string in;
     cin >> in;
-    //mc[in]->execute();
+    //Commande::mc[in]->execute();
     cout << "Vous avez lancé : " << in;
 }

@@ -2,12 +2,15 @@
 #include "commandes/Invocateur.h"
 
 int main() {
+
+    cout << "Simulation de robot ! " << endl;
+    Robot robot;
+
 	Invocateur iv;
     iv.invoquer();
 
 
-    cout << "Simulation de robot ! " << endl;
-    Robot robot;
+
 
     robot.avancer(2,3);
 
