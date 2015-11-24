@@ -11,16 +11,18 @@ Classe Commande
 
 #include <map>
 #include "Commande.h"
+#include "../Robot.h"
 
 using namespace std;
 
 class CommandeRobot : public Commande {
 
 private :
+	Robot robot;
 
 public :
-    void execute();
-    void desexecute();
+    virtual void execute();
+    virtual void desexecute();
 
 };
 

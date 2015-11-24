@@ -11,15 +11,17 @@ Classe Invocateur
 
 #include <map>
 #include "Commande.h"
+#include "AvancerCommande.h"
 
 using namespace std;
 
 class Invocateur {
 
 private :
-	map<string,Commande> mc;
+	map<string,Commande*> mc;
 	
 public :
+	Invocateur();
 	void invoquer();
 
 };
