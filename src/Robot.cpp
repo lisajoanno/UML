@@ -63,8 +63,8 @@ void Robot::avancer(int x, int y) {
 	try {
 		ordre = "avancer";
 		etat->avancer();
-		position.setX(x);
-		position.setY(y);
+		position.setX(position.getX()+x);
+		position.setY(position.getY()+y);
 		afficher();
 	} catch(RobotException e) { };
 }
