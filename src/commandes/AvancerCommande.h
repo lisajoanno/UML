@@ -17,9 +17,8 @@ private :
 	int x, y;
 	
 public :
-	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {};
 	AvancerCommande() : CommandeRobot("AvancerCommande") {};
-	//AvancerCommande(Invocateur* inv);
+	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {};
 	
 	void execute();
 	void desexecute();

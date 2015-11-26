@@ -7,6 +7,7 @@ Invocateur::Invocateur() {
 }
 
 void Invocateur::invoquer() {
+    cout << "Entrez une commande :" << endl;
     string in;
     cin >> in;
     Commande::mc[in]->execute();

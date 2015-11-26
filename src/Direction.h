@@ -6,6 +6,9 @@ Caractérise la direction du robot. C'est une enum qui peut prendre les valeurs 
 
 **********/
 
+#ifndef DIRECTION_H
+#define DIRECTION_H
+
 #include <iostream>
 
 using namespace std;
@@ -15,3 +18,5 @@ namespace Direction {
 	
 	string getString(ENDirection);
 };
+
+#endif
