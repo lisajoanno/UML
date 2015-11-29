@@ -10,8 +10,8 @@ public:
 	EvaluerPlotCommande() : CommandeRobot("EvaluerPlotCommande") {};
 	EvaluerPlotCommande(Invocateur* inv) : CommandeRobot("EvaluerPlotCommande", inv) {};
 
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 };
 

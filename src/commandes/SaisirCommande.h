@@ -20,8 +20,8 @@ public :
 	SaisirCommande() : CommandeRobot("SaisirCommande") {};
 	SaisirCommande(Invocateur* inv) : CommandeRobot("SaisirCommande", inv) {};
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 	static SaisirCommande saisirCommande;
 };

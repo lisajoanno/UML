@@ -17,8 +17,8 @@ public :
 	PoserCommande() : CommandeRobot("PoserCommande") {};
 	PoserCommande(Invocateur* inv) : CommandeRobot("PoserCommande", inv) {};
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 };
 

@@ -16,7 +16,7 @@ Commande::Commande() {
 	
 }
 
-void Commande::execute() {
+void Commande::execute(Robot* r) {
 	throw RobotException();
 }
 

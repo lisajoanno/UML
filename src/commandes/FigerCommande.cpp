@@ -1,10 +1,11 @@
 #include "FigerCommande.h"
 
-void FigerCommande::execute() {
-	robot.figer();
-	i->invoquer();
+void FigerCommande::execute(Robot* robot) {
+	robot->figer();
+	i->invoquer(robot);
 }
 
-void FigerCommande::desexecute() {
-	robot.repartir();
+void FigerCommande::desexecute(Robot* robot) {
+	robot->repartir();
+	i->invoquer(robot);
 }

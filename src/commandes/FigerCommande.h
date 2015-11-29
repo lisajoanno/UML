@@ -17,8 +17,8 @@ public :
 	FigerCommande() : CommandeRobot("FigerCommande") {};
 	FigerCommande(Invocateur* inv) : CommandeRobot("FigerCommande", inv) {};
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 };
 

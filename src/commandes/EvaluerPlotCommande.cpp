@@ -1,9 +1,10 @@
 #include "EvaluerPlotCommande.h"
 
-void EvaluerPlotCommande::execute() {
-	robot.evaluerPlot();
-	i->invoquer();
+void EvaluerPlotCommande::execute(Robot* robot) {
+	robot->evaluerPlot();
+	i->invoquer(robot);
 }
 
-void EvaluerPlotCommande::desexecute() {	
+void EvaluerPlotCommande::desexecute(Robot* robot) {	
+	i->invoquer(robot);
 }

@@ -18,10 +18,10 @@ private :
 	
 public :
 	AvancerCommande() : CommandeRobot("AvancerCommande") {};
-	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {};
+	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {}
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 	static AvancerCommande avancerCommande;
 };

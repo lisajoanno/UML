@@ -19,7 +19,7 @@ private :
 
 public :
 	Invocateur();
-	void invoquer();
+	void invoquer(Robot* r);
 	int getIn();
 };
 

@@ -1,10 +1,11 @@
 #include "PeserCommande.h"
 
-void PeserCommande::execute() {
-	robot.peser();
-	i->invoquer();
+void PeserCommande::execute(Robot* robot) {
+	robot->peser();
+	i->invoquer(robot);
 }
 
 
-void PeserCommande::desexecute() {
+void PeserCommande::desexecute(Robot* robot) {
+	i->invoquer(robot);
 }

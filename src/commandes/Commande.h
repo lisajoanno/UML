@@ -20,7 +20,7 @@ public :
 	
 	static map<string,Commande*> mc;
 
-	virtual void execute();
+	virtual void execute(Robot* r);
 	virtual void desexecute();
 
 };

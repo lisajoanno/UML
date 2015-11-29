@@ -1,10 +1,10 @@
 #include "RepartirCommande.h"
 
-void RepartirCommande::execute() {
-	robot.repartir();
-	i->invoquer();
+void RepartirCommande::execute(Robot* robot) {
+	robot->repartir();
+	i->invoquer(robot);
 }
 
-void RepartirCommande::desexecute() {
-	robot.figer();
+void RepartirCommande::desexecute(Robot* robot) {
+	robot->figer();
 }

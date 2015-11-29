@@ -11,8 +11,8 @@ public :
 	PeserCommande() : CommandeRobot("PeserCommande") {};
 	PeserCommande(Invocateur* inv) : CommandeRobot("PeserCommande", inv) {};
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 };
 

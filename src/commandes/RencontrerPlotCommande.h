@@ -13,8 +13,8 @@ public:
 	RencontrerPlotCommande() : CommandeRobot("RencontrerPlotCommande") {};
 	RencontrerPlotCommande(Invocateur* inv) : CommandeRobot("RencontrerPlotCommande", inv) {};
 
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 	static RencontrerPlotCommande rencontrerPlotCommande;
 

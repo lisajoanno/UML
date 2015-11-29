@@ -17,8 +17,8 @@ public :
 	RepartirCommande() : CommandeRobot("RepartirCommande") {};
 	RepartirCommande(Invocateur* inv) : CommandeRobot("RepartirCommande", inv) {};
 	
-	void execute();
-	void desexecute();
+	void execute(Robot* robot);
+	void desexecute(Robot* robot);
 
 };
 

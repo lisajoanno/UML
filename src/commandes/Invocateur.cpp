@@ -6,11 +6,11 @@
 Invocateur::Invocateur() {
 }
 
-void Invocateur::invoquer() {
+void Invocateur::invoquer(Robot* r) {
     cout << "Entrez une commande :" << endl;
     string in;
     cin >> in;
-    Commande::mc[in]->execute();
+    Commande::mc[in]->execute(r);
     cout << "Vous avez lancé : " << in << endl;
 }
 

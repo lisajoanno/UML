@@ -16,12 +16,9 @@ Classe Commande
 
 using namespace std;
 
-//class Invocateur;
-
 class CommandeRobot : public Commande {
 
 public :
-	Robot robot;
 	Invocateur* i;
 
 public :
@@ -29,11 +26,12 @@ public :
 
 	CommandeRobot(Invocateur* inv) : i(inv) {};
 
-    virtual void execute() {};
-    virtual void desexecute() {};
-
     CommandeRobot(string d);
     CommandeRobot(string d, Invocateur* inv);
+
+    virtual void execute(Robot* robot) {};
+    virtual void desexecute() {};
+
     static map<string,CommandeRobot*>& commEffectuees();
 };
 

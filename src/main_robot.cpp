@@ -4,10 +4,10 @@
 int main() {
 
     cout << "Simulation de robot ! " << endl;
-    //Robot robot;
+    Robot* robot = new Robot();
 
 	Invocateur iv;
-    iv.invoquer();
+    iv.invoquer(robot);
 
     /**
     // pour ne pas que le premier ordre soit d'avancer
