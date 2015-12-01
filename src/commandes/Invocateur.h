@@ -21,6 +21,7 @@ public :
 	Invocateur();
 	void invoquer(Robot* r);
 	int getIn();
+	string getStr();
 };
 
 #endif

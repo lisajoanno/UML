@@ -1,6 +1,7 @@
 #include "EvaluerPlotCommande.h"
 
 void EvaluerPlotCommande::execute(Robot* robot) {
+	cout << "Coucou";
 	robot->evaluerPlot();
 	i->invoquer(robot);
 }

@@ -16,3 +16,15 @@ string Direction::getString(Direction::ENDirection d) {
     }
     return "";
 }
+
+Direction::ENDirection Direction::getDirection(string d) {
+    if(d == "N")
+        return N;
+    if(d == "S")
+        return S;
+    if(d == "E")
+        return E;
+    if(d == "O")
+        return O;
+    return N;
+}

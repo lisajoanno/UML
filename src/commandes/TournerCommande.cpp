@@ -1,13 +1,13 @@
 #include "TournerCommande.h"
+#include "../Direction.h"
+#include <iostream>
 
 TournerCommande TournerCommande::tournerCommande;
 
 void TournerCommande::execute(Robot* robot) {
 	tournerCommande.d = robot->getDirection();
 	cout << "Direction ? ";
-	// ci dessous : convertir int en enum ????
-	//d = i->getIn();
-	robot->tourner(d);
+	robot->tourner(Direction::getDirection(i->getStr()));
 	i->invoquer(robot);
 }
 

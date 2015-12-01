@@ -17,6 +17,9 @@ namespace Direction {
 	typedef enum { N, S, E, O } ENDirection;
 	
 	string getString(ENDirection);
+		
+	ENDirection getDirection(string s);
+
 };
 
 #endif

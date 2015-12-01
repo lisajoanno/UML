@@ -19,3 +19,9 @@ int Invocateur::getIn() {
 	cin >> in;
 	return in;
 }
+
+string Invocateur::getStr() {
+	string choix;
+	cin >> choix;
+	return choix;
+}
