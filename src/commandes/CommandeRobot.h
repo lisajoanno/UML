@@ -23,16 +23,11 @@ public :
 
 public :
 	CommandeRobot() {};
-
+	
 	CommandeRobot(Invocateur* inv) : i(inv) {};
-
-    CommandeRobot(string d);
-    CommandeRobot(string d, Invocateur* inv);
-
+	
     virtual void execute(Robot* robot) {};
     virtual void desexecute() {};
-
-    static map<string,CommandeRobot*>& commEffectuees();
 };
 
 #endif

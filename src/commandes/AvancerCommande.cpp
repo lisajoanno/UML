@@ -2,21 +2,21 @@
 
 AvancerCommande AvancerCommande::avancerCommande;
 
-void AvancerCommande::execute(Robot* robot) {	
+void AvancerCommande::execute() {	
 	cout << "x ? ";
 	x = i->getIn();
 	cout << "y ? ";
 	y = i->getIn();
-	robot->avancer(x, y);
+	//robot->avancer(x, y);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
 	// Pour continuer à demander des ordres à l'utilisateur
-	i->invoquer(robot);
+	i->invoquer();
 }
 
-void AvancerCommande::desexecute(Robot* robot) {
+void AvancerCommande::desexecute() {
 	x = avancerCommande.x;
 	y = avancerCommande.y;
-	robot->avancer(-x, -y);
-	i->invoquer(robot);
+	//robot->avancer(-x, -y);
+	i->invoquer();
 }

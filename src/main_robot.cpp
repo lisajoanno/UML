@@ -6,8 +6,8 @@ int main() {
     cout << "Simulation de robot ! " << endl;
     Robot* robot = new Robot();
 
-	Invocateur iv;
-    iv.invoquer(robot);
+	Invocateur iv(robot);
+    iv.invoquer();
 
     /**
     // pour ne pas que le premier ordre soit d'avancer

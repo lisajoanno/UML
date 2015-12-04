@@ -10,13 +10,17 @@ private:
 	Plot p;
 
 public:
-	RencontrerPlotCommande() : CommandeRobot("RencontrerPlotCommande") {};
-	RencontrerPlotCommande(Invocateur* inv) : CommandeRobot("RencontrerPlotCommande", inv) {};
-
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
-
 	static RencontrerPlotCommande rencontrerPlotCommande;
+	
+	void execute();
+	void desexecute();
+
+
+	Commande* constructeurVirtuel() {
+		return new RencontrerPlotCommande();
+	}
+
+	
 
 };
 

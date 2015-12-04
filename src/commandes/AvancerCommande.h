@@ -17,11 +17,12 @@ private :
 	int x, y;
 	
 public :
-	AvancerCommande() : CommandeRobot("AvancerCommande") {};
-	AvancerCommande(Invocateur* inv) : CommandeRobot("AvancerCommande", inv) {}
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
+	void execute();
+	void desexecute();
+
+	Commande* constructeurVirtuel() {
+		return new AvancerCommande();
+	}
 
 	static AvancerCommande avancerCommande;
 };

@@ -17,12 +17,14 @@ class Commande {
 	
 public :
 	Commande();
-	
-	static map<string,Commande*> mc;
 
-	virtual void execute(Robot* r);
+	virtual void execute();
 	virtual void desexecute();
 
+	static map<string,Commande*>& commandesInscrites();
+
+	static Commande* nouvelleCommande(string s);
+	virtual Commande* constructeurVirtuel() {};
 };
 
 #endif

@@ -16,10 +16,13 @@ using namespace std;
 class Invocateur {
 
 private :
-
+	Robot* robot;
+	
 public :
 	Invocateur();
-	void invoquer(Robot* r);
+	Invocateur(Robot* r);
+
+	void invoquer();
 	int getIn();
 	string getStr();
 };
