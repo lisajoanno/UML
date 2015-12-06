@@ -17,6 +17,11 @@ private :
 	int x, y;
 	
 public :
+	
+	AvancerCommande() { 
+		Commande("AvancerCommande");
+		Commande::nouvelleCommande("AvancerCommande");
+	}
 	void execute();
 	void desexecute();
 

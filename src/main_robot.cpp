@@ -1,11 +1,11 @@
 #include "Robot.h"
 #include "commandes/Invocateur.h"
+#include "commandes/Commande.h"
 
 int main() {
 
     cout << "Simulation de robot ! " << endl;
     Robot* robot = new Robot();
-
 	Invocateur iv(robot);
     iv.invoquer();
 

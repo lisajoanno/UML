@@ -16,14 +16,15 @@ Classe Commande
 class Commande {
 	
 public :
+	static map<string,Commande*>& commandesInscrites();
+	static Commande* nouvelleCommande(string s);
+
 	Commande();
+	Commande(string s);
 
 	virtual void execute();
 	virtual void desexecute();
 
-	static map<string,Commande*>& commandesInscrites();
-
-	static Commande* nouvelleCommande(string s);
 	virtual Commande* constructeurVirtuel() {};
 };
 

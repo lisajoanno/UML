@@ -11,7 +11,7 @@ void Invocateur::invoquer() {
     cout << "Entrez une commande :" << endl;
     string in;
     cin >> in;
-    Commande::commandesInscrites()[in]->execute();
+    Commande::commandesInscrites()["AvancerCommande"]->execute();
     cout << "Vous avez lancé : " << in << endl;
 }
 
@@ -25,4 +25,8 @@ string Invocateur::getStr() {
 	string choix;
 	cin >> choix;
 	return choix;
+}
+
+Robot* Invocateur::getRobot() {
+	return robot;
 }

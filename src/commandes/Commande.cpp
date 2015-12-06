@@ -4,7 +4,10 @@
 #include "RencontrerPlotCommande.h"
 
 Commande::Commande() {
-	
+}
+
+Commande::Commande(string s) {
+	commandesInscrites()[s] = this;
 }
 
 void Commande::execute() {

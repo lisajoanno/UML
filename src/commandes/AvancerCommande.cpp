@@ -7,7 +7,7 @@ void AvancerCommande::execute() {
 	x = i->getIn();
 	cout << "y ? ";
 	y = i->getIn();
-	//robot->avancer(x, y);
+	i->getRobot()->avancer(x, y);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
 	// Pour continuer à demander des ordres à l'utilisateur

@@ -25,6 +25,7 @@ public :
 	void invoquer();
 	int getIn();
 	string getStr();
+	Robot* getRobot();
 };
 
 #endif
