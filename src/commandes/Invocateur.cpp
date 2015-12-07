@@ -1,6 +1,5 @@
 #include "Invocateur.h"
 #include "Commande.h"
-#include <typeinfo>
 
 //map<string, Commande*>Commande::mc;
 
@@ -12,20 +11,7 @@ void Invocateur::invoquer() {
     cout << "Entrez une commande :" << endl;
     string in;
     cin >> in;
-
-    // pour print toutes les string dans la map
-    map<string,Commande*> t = Commande::commandesInscrites();
-	for(auto elem : t)
-	{
-	   //cout << elem.first << endl;
-	   //cout << typeid(elem).name() << '\n';
-	}
-
-    t["AvancerCommande"]->execute();
-    // pour print le type de com
-    //std::cout << typeid(com).name() << '\n';
-    //com->execute();
-    //Commande::commandesInscrites()["AvancerCommande"]->execute();
+    Commande::commandesInscrites()["AvancerCommande"]->execute();
     cout << "Vous avez lancé : " << in << endl;
 }
 

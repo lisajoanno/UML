@@ -9,7 +9,7 @@ void AvancerCommande::execute() {
 	cout << "y ? ";
 	y = i->getIn();
 	Robot* rt = i->getRobot();
-	cout << "ici" << endl;
+	cout << "ici, je n'irai pas" << endl;
 	rt->avancer(x, y);
 	avancerCommande.x = x;
 	avancerCommande.y = y;

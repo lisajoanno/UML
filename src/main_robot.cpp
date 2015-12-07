@@ -5,8 +5,7 @@
 int main() {
 
     cout << "Simulation de robot ! " << endl;
-    Robot* robot = new Robot();
-	Invocateur iv(robot);
+	Invocateur iv(new Robot);
     iv.invoquer();
 
     /**

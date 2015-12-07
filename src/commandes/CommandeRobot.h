@@ -24,9 +24,9 @@ public :
 public :
 	CommandeRobot() {};
 	
-	CommandeRobot(Invocateur* inv) : i(inv) {};
+	//CommandeRobot(Invocateur* inv) : i(inv) {};
 	
-    virtual void execute(Robot* robot) {};
+    virtual void execute() {};
     virtual void desexecute() {};
 };
 
