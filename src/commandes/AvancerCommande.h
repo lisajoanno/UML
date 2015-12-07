@@ -20,16 +20,20 @@ private :
 public :
 	
 	AvancerCommande() { 
-		Commande("AvancerCommande");
+		//Commande("AvancerCommande");
 		//Commande::nouvelleCommande("AvancerCommande");
-		enregNouvCommande("AvancerCommande", this);
 	}
+
+	AvancerCommande(string s) {
+		enregNouvCommande(s, this);
+	}
+
 	void execute();
 	void desexecute();
 
-	AvancerCommande* constructeurVirtuel() {
-		cout << "Constructeur virtuel de avancer commande " << endl;
-		return new AvancerCommande;
+	virtual Commande* constructeurVirtuel() {
+		cout << "Constructeur virtuel de avancer commande" << endl;
+		return new AvancerCommande();
 	}
 
 	static AvancerCommande avancerCommande;

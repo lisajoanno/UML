@@ -21,8 +21,12 @@ public:
 	}
 
 	RencontrerPlotCommande() { 
-		Commande("RencontrerPlot");
-		Commande::nouvelleCommande("RencontrerPlot");
+		//Commande("RencontrerPlot");
+		//Commande::nouvelleCommande("RencontrerPlot");
+	}
+
+	RencontrerPlotCommande(string s) {
+		enregNouvCommande(s, this);
 	}
 	
 

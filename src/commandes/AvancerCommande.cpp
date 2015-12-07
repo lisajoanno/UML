@@ -1,15 +1,14 @@
 #include "AvancerCommande.h"
 #include "../Robot.h"
 
-AvancerCommande AvancerCommande::avancerCommande;
+AvancerCommande AvancerCommande::avancerCommande("AVANCER");
 
-void AvancerCommande::execute() {	
+void AvancerCommande::execute() {
 	cout << "x ? ";
 	x = Invocateur::i->getIn();
 	cout << "y ? ";
 	y = Invocateur::i->getIn();
-	Robot* rt = Invocateur::i->getRobot();
-	rt->avancer(x, y);
+	Invocateur::i->getRobot()->avancer(x, y);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
 	// Pour continuer à demander des ordres à l'utilisateur

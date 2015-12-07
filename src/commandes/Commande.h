@@ -25,7 +25,7 @@ public :
 	virtual void execute();
 	virtual void desexecute();
 
-	virtual Commande* constructeurVirtuel() {};
+	virtual Commande* constructeurVirtuel() { cout << "shouldn't be here...! " << endl;};
 	virtual void enregNouvCommande(string s, Commande* com);
 };
 

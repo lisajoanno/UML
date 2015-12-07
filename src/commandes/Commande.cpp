@@ -3,9 +3,9 @@
 Commande::Commande() {
 }
 
-Commande::Commande(string s) {
-	commandesInscrites()[s] = this;
-}
+// Commande::Commande(string s) {
+// 	commandesInscrites()[s] = this;
+// }
 
 void Commande::execute() {
 	throw RobotException();
