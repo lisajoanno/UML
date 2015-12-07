@@ -13,12 +13,14 @@ Classe Invocateur
 
 using namespace std;
 
+class Robot;
+
 class Invocateur {
 
-private :
+private:
 	Robot* robot;
 	
-public :
+public:
 	Invocateur();
 	Invocateur(Robot* r);
 

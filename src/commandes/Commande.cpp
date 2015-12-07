@@ -1,4 +1,5 @@
 #include "Commande.h"
+#include <typeinfo>
 
 #include "AvancerCommande.h"
 #include "RencontrerPlotCommande.h"
@@ -25,4 +26,8 @@ Commande* Commande::nouvelleCommande(string s) {
 map<string,Commande*>& Commande::commandesInscrites() {
 	static map<string,Commande*>* comInscrites = new map<string,Commande*>;
 	return *comInscrites;
+}
+
+void Commande::enregNouvCommande(string s, Commande* com) {
+	commandesInscrites()[s] = com;
 }

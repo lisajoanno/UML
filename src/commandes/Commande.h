@@ -26,6 +26,7 @@ public :
 	virtual void desexecute();
 
 	virtual Commande* constructeurVirtuel() {};
+	virtual void enregNouvCommande(string s, Commande* com);
 };
 
 #endif

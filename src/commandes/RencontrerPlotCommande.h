@@ -20,6 +20,10 @@ public:
 		return new RencontrerPlotCommande();
 	}
 
+	RencontrerPlotCommande() { 
+		Commande("RencontrerPlot");
+		Commande::nouvelleCommande("RencontrerPlot");
+	}
 	
 
 };

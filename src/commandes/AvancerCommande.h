@@ -8,6 +8,7 @@
 
 #include <map>
 #include "CommandeRobot.h"
+#include <typeinfo>
 
 using namespace std;
 
@@ -19,14 +20,17 @@ private :
 public :
 	
 	AvancerCommande() { 
-		Commande("AvancerCommande");
-		Commande::nouvelleCommande("AvancerCommande");
+		//cout << "type de this dans AvancerCommande :" << typeid(this).name() << '\n';
+		//Commande("AvancerCommande");
+		//Commande::nouvelleCommande("AvancerCommande");
+		enregNouvCommande("AvancerCommande", this);
 	}
 	void execute();
 	void desexecute();
 
-	Commande* constructeurVirtuel() {
-		return new AvancerCommande();
+	AvancerCommande* constructeurVirtuel() {
+		cout << "Constructeur virtuel de avancer commande " << endl;
+		return new AvancerCommande;
 	}
 
 	static AvancerCommande avancerCommande;
