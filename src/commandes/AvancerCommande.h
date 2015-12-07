@@ -20,8 +20,7 @@ private :
 public :
 	
 	AvancerCommande() { 
-		//cout << "type de this dans AvancerCommande :" << typeid(this).name() << '\n';
-		//Commande("AvancerCommande");
+		Commande("AvancerCommande");
 		//Commande::nouvelleCommande("AvancerCommande");
 		enregNouvCommande("AvancerCommande", this);
 	}

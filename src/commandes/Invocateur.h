@@ -21,13 +21,17 @@ private:
 	Robot* robot;
 	
 public:
-	Invocateur();
-	Invocateur(Robot* r);
+	static Invocateur* i;
+
+	Invocateur() {};
+	Invocateur(Robot* r) : robot(r) {};
 
 	void invoquer();
 	int getIn();
 	string getStr();
 	Robot* getRobot();
+
+
 };
 
 #endif

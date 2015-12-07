@@ -5,16 +5,15 @@ AvancerCommande AvancerCommande::avancerCommande;
 
 void AvancerCommande::execute() {	
 	cout << "x ? ";
-	x = i->getIn();
+	x = Invocateur::i->getIn();
 	cout << "y ? ";
-	y = i->getIn();
-	Robot* rt = i->getRobot();
-	cout << "ici, je n'irai pas" << endl;
+	y = Invocateur::i->getIn();
+	Robot* rt = Invocateur::i->getRobot();
 	rt->avancer(x, y);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
 	// Pour continuer à demander des ordres à l'utilisateur
-	i->invoquer();
+	Invocateur::i->invoquer();
 }
 
 void AvancerCommande::desexecute() {

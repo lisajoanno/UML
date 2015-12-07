@@ -3,15 +3,13 @@
 
 //map<string, Commande*>Commande::mc;
 
-Invocateur::Invocateur(Robot* r) {
-	robot = r;
-}
+Invocateur* Invocateur::i = new Invocateur(new Robot);
 
 void Invocateur::invoquer() {
     cout << "Entrez une commande :" << endl;
     string in;
     cin >> in;
-    Commande::commandesInscrites()["AvancerCommande"]->execute();
+    Commande::commandesInscrites()[in]->execute();
     cout << "Vous avez lancé : " << in << endl;
 }
 
