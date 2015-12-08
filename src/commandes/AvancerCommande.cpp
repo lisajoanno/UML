@@ -20,6 +20,7 @@ void AvancerCommande::execute() {
 	cout << "y ? ";
 	y = Invocateur::i->getIn();
 	Invocateur::i->getRobot()->avancer(x, y);
+	Commande::effectuerNouvelleCommande(this);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
 	// Pour continuer à demander des ordres à l'utilisateur
@@ -29,7 +30,7 @@ void AvancerCommande::execute() {
 void AvancerCommande::desexecute() {
 	x = avancerCommande.x;
 	y = avancerCommande.y;
-	//robot->avancer(-x, -y);
+	Invocateur::i->getRobot()->avancer(-x, -y);
 	Invocateur::i->invoquer();
 }
 

@@ -19,11 +19,13 @@ void RencontrerPlotCommande::execute() {
 	p = Plot(Invocateur::i->getIn());
 	rencontrerPlotCommande.p = p;
 	Invocateur::i->getRobot()->rencontrerPlot(p);
+	Commande::effectuerNouvelleCommande(this);
 	Invocateur::i->invoquer();
 }
 
 void RencontrerPlotCommande::desexecute() {
 	p = rencontrerPlotCommande.p;
-	//robot->rencontrerPlot(p);
+	cout << "dese de rencontrerplot" << endl;
+	Invocateur::i->getRobot()->tourner(Invocateur::i->getRobot()->getDirection());
 	Invocateur::i->invoquer();
 }
