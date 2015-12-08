@@ -4,6 +4,8 @@
 #include <map>
 #include "CommandeRobot.h"
 
+using namespace std;
+
 class RencontrerPlotCommande : public CommandeRobot {
 
 private:
@@ -11,26 +13,13 @@ private:
 
 public:
 	static RencontrerPlotCommande rencontrerPlotCommande;
-	
+
+	RencontrerPlotCommande();
+	RencontrerPlotCommande(string s);
+	Commande* constructeurVirtuel();
+
 	void execute();
 	void desexecute();
-
-
-	Commande* constructeurVirtuel() {
-		return new RencontrerPlotCommande();
-	}
-
-	RencontrerPlotCommande() { 
-		//Commande("RencontrerPlot");
-		//Commande::nouvelleCommande("RencontrerPlot");
-	}
-
-	RencontrerPlotCommande(string s) {
-		enregNouvCommande(s, this);
-	}
-	
-
 };
-
 
 #endif

@@ -1,7 +1,18 @@
 #include "AvancerCommande.h"
-#include "../Robot.h"
 
 AvancerCommande AvancerCommande::avancerCommande("AVANCER");
+
+AvancerCommande::AvancerCommande() {
+	Commande("AVANCER");
+}
+
+AvancerCommande::AvancerCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* AvancerCommande::constructeurVirtuel() {
+	return new AvancerCommande();
+}
 
 void AvancerCommande::execute() {
 	cout << "x ? ";
@@ -19,6 +30,6 @@ void AvancerCommande::desexecute() {
 	x = avancerCommande.x;
 	y = avancerCommande.y;
 	//robot->avancer(-x, -y);
-	i->invoquer();
+	Invocateur::i->invoquer();
 }
 

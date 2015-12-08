@@ -13,13 +13,15 @@ using namespace std;
 
 class FigerCommande : public CommandeRobot {
 
-public :
-	FigerCommande() : CommandeRobot("FigerCommande") {};
-	FigerCommande(Invocateur* inv) : CommandeRobot("FigerCommande", inv) {};
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
+public:
+	static FigerCommande figerCommande;
 
+	FigerCommande();
+	FigerCommande(string s);
+	Commande* constructeurVirtuel();
+
+	void execute();
+	void desexecute();
 };
 
 #endif

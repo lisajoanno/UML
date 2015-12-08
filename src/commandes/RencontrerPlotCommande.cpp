@@ -2,6 +2,18 @@
 
 RencontrerPlotCommande RencontrerPlotCommande::rencontrerPlotCommande("RENCONTRERPLOT");
 
+RencontrerPlotCommande::RencontrerPlotCommande() { 
+	Commande("RENCONTRERPLOT");
+}
+
+RencontrerPlotCommande::RencontrerPlotCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* RencontrerPlotCommande::constructeurVirtuel() {
+	return new RencontrerPlotCommande();
+}
+
 void RencontrerPlotCommande::execute() {
 	cout << "Hauteur plot ? ";
 	p = Plot(Invocateur::i->getIn());

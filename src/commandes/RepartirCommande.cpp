@@ -1,10 +1,25 @@
 #include "RepartirCommande.h"
 
-void RepartirCommande::execute(Robot* robot) {
-	robot->repartir();
-	i->invoquer(robot);
+RepartirCommande RepartirCommande::repartirCommande("REPARTIR");
+
+RepartirCommande::RepartirCommande() { 
+	Commande("REPARTIR");
 }
 
-void RepartirCommande::desexecute(Robot* robot) {
-	robot->figer();
+RepartirCommande::RepartirCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* RepartirCommande::constructeurVirtuel() {
+	return new RepartirCommande();
+}
+
+void RepartirCommande::execute() {
+	Invocateur::i->getRobot()->repartir();
+	Invocateur::i->invoquer();
+}
+
+void RepartirCommande::desexecute() {
+	Invocateur::i->getRobot()->figer();
+	Invocateur::i->invoquer();
 }

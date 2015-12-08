@@ -1,11 +1,24 @@
 #include "EvaluerPlotCommande.h"
 
-void EvaluerPlotCommande::execute(Robot* robot) {
-	cout << "Coucou";
-	robot->evaluerPlot();
-	i->invoquer(robot);
+EvaluerPlotCommande EvaluerPlotCommande::evaluerPlotCommande("EVALUERPLOT");
+
+EvaluerPlotCommande::EvaluerPlotCommande() {
+	Commande("EVALUERPLOT");
 }
 
-void EvaluerPlotCommande::desexecute(Robot* robot) {	
-	i->invoquer(robot);
+EvaluerPlotCommande::EvaluerPlotCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* EvaluerPlotCommande::constructeurVirtuel() {
+	return new EvaluerPlotCommande();
+}
+
+void EvaluerPlotCommande::execute() {
+	Invocateur::i->getRobot()->evaluerPlot();
+	Invocateur::i->invoquer();
+}
+
+void EvaluerPlotCommande::desexecute() {	
+	Invocateur::i->invoquer();
 }

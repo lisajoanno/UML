@@ -7,12 +7,14 @@
 class EvaluerPlotCommande : public CommandeRobot {
 
 public:
-	EvaluerPlotCommande() : CommandeRobot("EvaluerPlotCommande") {};
-	EvaluerPlotCommande(Invocateur* inv) : CommandeRobot("EvaluerPlotCommande", inv) {};
+	static EvaluerPlotCommande evaluerPlotCommande;
 
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
+	EvaluerPlotCommande();
+	EvaluerPlotCommande(string s);
+	Commande* constructeurVirtuel();
 
+	void execute();
+	void desexecute();
 };
 
 #endif

@@ -1,17 +1,28 @@
 #include "TournerCommande.h"
 #include "../Direction.h"
-#include <iostream>
 
-TournerCommande TournerCommande::tournerCommande;
+TournerCommande TournerCommande::tournerCommande("TOURNER");
 
-void TournerCommande::execute(Robot* robot) {
-	tournerCommande.d = robot->getDirection();
-	cout << "Direction ? ";
-	robot->tourner(Direction::getDirection(i->getStr()));
-	i->invoquer(robot);
+TournerCommande::TournerCommande() {
+	Commande("TOURNER");
 }
 
-void TournerCommande::desexecute(Robot* robot) {
-	robot->tourner(tournerCommande.d);
-	i->invoquer(robot);
+TournerCommande::TournerCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* TournerCommande::constructeurVirtuel() {
+	return new TournerCommande();
+}
+
+void TournerCommande::execute() {
+	tournerCommande.d = Invocateur::i->getRobot()->getDirection();
+	cout << "Direction ? ";
+	Invocateur::i->getRobot()->tourner(Direction::getDirection(Invocateur::i->getStr()));
+	Invocateur::i->invoquer();
+}
+
+void TournerCommande::desexecute() {
+	Invocateur::i->getRobot()->tourner(tournerCommande.d);
+	Invocateur::i->invoquer();
 }

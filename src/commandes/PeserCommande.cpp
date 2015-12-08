@@ -1,11 +1,24 @@
 #include "PeserCommande.h"
 
-void PeserCommande::execute(Robot* robot) {
-	robot->peser();
-	i->invoquer(robot);
+PeserCommande PeserCommande::peserCommande("PESER");
+
+PeserCommande::PeserCommande() {
+	Commande("PESER");
 }
 
+PeserCommande::PeserCommande(string s) {
+	nouvelleCommande(s,this);
+}
 
-void PeserCommande::desexecute(Robot* robot) {
-	i->invoquer(robot);
+Commande* PeserCommande::constructeurVirtuel() {
+	return new PeserCommande();
+}
+
+void PeserCommande::execute() {
+	Invocateur::i->getRobot()->peser();
+	Invocateur::i->invoquer();
+}
+
+void PeserCommande::desexecute() {
+	Invocateur::i->invoquer();
 }

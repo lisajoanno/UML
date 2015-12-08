@@ -1,16 +1,28 @@
 #include "SaisirCommande.h"
 
-SaisirCommande SaisirCommande::saisirCommande;
+SaisirCommande SaisirCommande::saisirCommande("SAISIR");
 
-void SaisirCommande::execute(Robot* robot) {
-	cout << "Objet ? ";
-	o = i->getIn();
-	saisirCommande.o = o;
-	robot->saisir(o);
-	i->invoquer(robot);
+SaisirCommande::SaisirCommande() {
+	Commande("SAISIR");
 }
 
-void SaisirCommande::desexecute(Robot* robot) {
-	robot->poser();
-	i->invoquer(robot);
+SaisirCommande::SaisirCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* SaisirCommande::constructeurVirtuel() {
+	return new SaisirCommande();
+}
+
+void SaisirCommande::execute() {
+	cout << "Objet ? ";
+	o = Objet(Invocateur::i->getIn());
+	saisirCommande.o = o;
+	Invocateur::i->getRobot()->saisir(o);
+	Invocateur::i->invoquer();
+}
+
+void SaisirCommande::desexecute() {
+	Invocateur::i->getRobot()->poser();
+	Invocateur::i->invoquer();
 }

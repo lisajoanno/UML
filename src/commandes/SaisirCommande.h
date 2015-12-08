@@ -13,17 +13,18 @@ using namespace std;
 
 class SaisirCommande : public CommandeRobot {
 
-private :
+private:
 	Objet o;
 	
-public :
-	SaisirCommande() : CommandeRobot("SaisirCommande") {};
-	SaisirCommande(Invocateur* inv) : CommandeRobot("SaisirCommande", inv) {};
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
-
+public:
 	static SaisirCommande saisirCommande;
+
+	SaisirCommande();
+	SaisirCommande(string s);
+	Commande* constructeurVirtuel();
+
+	void execute();
+	void desexecute();
 };
 
 #endif

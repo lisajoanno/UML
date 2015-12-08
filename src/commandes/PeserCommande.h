@@ -7,13 +7,15 @@ using namespace std;
 
 class PeserCommande : public CommandeRobot {
 
-public :
-	PeserCommande() : CommandeRobot("PeserCommande") {};
-	PeserCommande(Invocateur* inv) : CommandeRobot("PeserCommande", inv) {};
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
+public:
+	static PeserCommande peserCommande;
 
+	PeserCommande();
+	PeserCommande(string s);
+	Commande* constructeurVirtuel();
+
+	void execute();
+	void desexecute();
 };
 
 

@@ -18,13 +18,14 @@ private :
 	Direction::ENDirection d;
 	
 public :
-	TournerCommande() : CommandeRobot("TournerCommande") {};
-	TournerCommande(Invocateur* inv) : CommandeRobot("TournerCommande", inv) {};
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
-
 	static TournerCommande tournerCommande;
+
+	TournerCommande();
+	TournerCommande(string s);
+	Commande* constructeurVirtuel();
+
+	void execute();
+	void desexecute();
 };
 
 #endif

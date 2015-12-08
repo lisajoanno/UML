@@ -13,13 +13,15 @@ using namespace std;
 
 class PoserCommande : public CommandeRobot {
 	
-public :
-	PoserCommande() : CommandeRobot("PoserCommande") {};
-	PoserCommande(Invocateur* inv) : CommandeRobot("PoserCommande", inv) {};
-	
-	void execute(Robot* robot);
-	void desexecute(Robot* robot);
+public:
+	static PoserCommande poserCommande;
 
+	PoserCommande();
+	PoserCommande(string s);
+	Commande* constructeurVirtuel();
+
+	void execute();
+	void desexecute();
 };
 
 #endif

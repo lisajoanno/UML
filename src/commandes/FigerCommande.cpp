@@ -1,11 +1,25 @@
 #include "FigerCommande.h"
 
-void FigerCommande::execute(Robot* robot) {
-	robot->figer();
-	i->invoquer(robot);
+FigerCommande FigerCommande::figerCommande("FIGER");
+
+FigerCommande::FigerCommande() {
+	Commande("FIGER");
 }
 
-void FigerCommande::desexecute(Robot* robot) {
-	robot->repartir();
-	i->invoquer(robot);
+FigerCommande::FigerCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* FigerCommande::constructeurVirtuel() {
+	return new FigerCommande();
+}
+
+void FigerCommande::execute() {
+	Invocateur::i->getRobot()->figer();
+	Invocateur::i->invoquer();
+}
+
+void FigerCommande::desexecute() {
+	Invocateur::i->getRobot()->repartir();
+	Invocateur::i->invoquer();
 }

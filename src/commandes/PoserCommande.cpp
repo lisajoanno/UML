@@ -1,10 +1,24 @@
 #include "PoserCommande.h"
 
-void PoserCommande::execute(Robot* robot) {
-	robot->poser();
-	i->invoquer(robot);
+PoserCommande PoserCommande::poserCommande("POSER");
+
+PoserCommande::PoserCommande() {
+	Commande("POSER");
 }
 
-void PoserCommande::desexecute(Robot* robot) {
-	i->invoquer(robot);
+PoserCommande::PoserCommande(string s) {
+	nouvelleCommande(s,this);
+}
+
+Commande* PoserCommande::constructeurVirtuel() {
+	return new PoserCommande();
+}
+
+void PoserCommande::execute() {
+	Invocateur::i->getRobot()->poser();
+	Invocateur::i->invoquer();
+}
+
+void PoserCommande::desexecute() {
+	Invocateur::i->invoquer();
 }

@@ -1,8 +1,5 @@
 /**********
 
-Classe Commande
-
-
 
 **********/
 
@@ -18,15 +15,10 @@ using namespace std;
 
 class CommandeRobot : public Commande {
 
-public :
-	Invocateur* i;
+public:
 
-public :
-	CommandeRobot() {};
-	
-	//CommandeRobot(Invocateur* inv) : i(inv) {};
-	
-    virtual void execute() {};
+public:
+	virtual void execute() {};
     virtual void desexecute() {};
 };
 
