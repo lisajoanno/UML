@@ -57,6 +57,7 @@ public :
 	void figer();
 	void repartir();
 	void afficher();
+	void afficherMessage(string s);
 };
 
 #endif

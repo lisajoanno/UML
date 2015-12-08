@@ -17,8 +17,8 @@ Commande* TournerCommande::constructeurVirtuel() {
 
 void TournerCommande::execute() {
 	tournerCommande.d = Invocateur::i->getRobot()->getDirection();
-	cout << "Direction ? ";
-	Invocateur::i->getRobot()->tourner(Direction::getDirection(Invocateur::i->getStr()));
+	Invocateur::i->getRobot()->tourner(Direction::getDirection(Invocateur::i->getStr("Direction")));
+	Commande::effectuerNouvelleCommande(this);
 	Invocateur::i->invoquer();
 }
 

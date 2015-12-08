@@ -3,23 +3,24 @@
 
 //map<string, Commande*>Commande::mc;
 
-Invocateur* Invocateur::i = new Invocateur(new Robot);
+Invocateur* Invocateur::i = new Invocateur(new Robot());
 
 void Invocateur::invoquer() {
-    cout << "Entrez une commande :" << endl;
+    i->getRobot()->afficherMessage("Entrez une commande : ");
     string in;
     cin >> in;
     Commande::commandesInscrites()[in]->execute();
-    cout << "Vous avez lancé : " << in << endl;
 }
 
-int Invocateur::getIn() {
+int Invocateur::getIn(string s) {
+	i->getRobot()->afficherMessage(s + " ? ");
 	int in;
 	cin >> in;
 	return in;
 }
 
-string Invocateur::getStr() {
+string Invocateur::getStr(string s) {
+	i->getRobot()->afficherMessage(s + " ? ");
 	string choix;
 	cin >> choix;
 	return choix;

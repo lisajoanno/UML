@@ -15,10 +15,8 @@ Commande* AvancerCommande::constructeurVirtuel() {
 }
 
 void AvancerCommande::execute() {
-	cout << "x ? ";
-	x = Invocateur::i->getIn();
-	cout << "y ? ";
-	y = Invocateur::i->getIn();
+	x = Invocateur::i->getIn("x");
+	y = Invocateur::i->getIn("y");
 	Invocateur::i->getRobot()->avancer(x, y);
 	Commande::effectuerNouvelleCommande(this);
 	avancerCommande.x = x;

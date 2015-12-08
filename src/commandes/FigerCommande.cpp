@@ -16,6 +16,7 @@ Commande* FigerCommande::constructeurVirtuel() {
 
 void FigerCommande::execute() {
 	Invocateur::i->getRobot()->figer();
+	Commande::effectuerNouvelleCommande(this);
 	Invocateur::i->invoquer();
 }
 

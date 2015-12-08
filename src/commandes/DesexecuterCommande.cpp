@@ -17,10 +17,10 @@ Commande* DesexecuterCommande::constructeurVirtuel() {
 
 void DesexecuterCommande::execute() {
 	Invocateur::i->getRobot();
-	cout << "Désexecutons !" << endl;
-
+	// Desexecute la dernière commande
 	Commande::commandesEffectuees->back()->desexecute();
-
+	// Efface la dernière commande ? Pourquoi pas ? 
+	Commande::commandesEffectuees->pop_back();
 	// Pour continuer à demander des ordres à l'utilisateur
 	Invocateur::i->invoquer();
 }

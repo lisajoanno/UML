@@ -27,8 +27,8 @@ public:
 	Invocateur(Robot* r) : robot(r) {};
 
 	void invoquer();
-	int getIn();
-	string getStr();
+	int getIn(string s);
+	string getStr(string s);
 	Robot* getRobot();
 
 

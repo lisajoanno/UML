@@ -20,6 +20,7 @@ public:
 	Afficheur() {};
 
 	virtual void miseAJour();
+	virtual void afficherMessage(string s);
 };
 
 #endif

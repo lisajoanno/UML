@@ -156,3 +156,8 @@ void Robot::repartir() {
 void Robot::afficher() {
 	afficheur->miseAJour();
 }
+
+// Affiche le message en paramètre
+void Robot::afficherMessage(string s) {
+	afficheur->afficherMessage(s);
+}

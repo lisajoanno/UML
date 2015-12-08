@@ -15,10 +15,10 @@ Commande* SaisirCommande::constructeurVirtuel() {
 }
 
 void SaisirCommande::execute() {
-	cout << "Objet ? ";
-	o = Objet(Invocateur::i->getIn());
+	o = Objet(Invocateur::i->getIn("Objet"));
 	saisirCommande.o = o;
 	Invocateur::i->getRobot()->saisir(o);
+	Commande::effectuerNouvelleCommande(this);
 	Invocateur::i->invoquer();
 }
 

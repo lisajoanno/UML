@@ -15,8 +15,7 @@ Commande* RencontrerPlotCommande::constructeurVirtuel() {
 }
 
 void RencontrerPlotCommande::execute() {
-	cout << "Hauteur plot ? ";
-	p = Plot(Invocateur::i->getIn());
+	p = Plot(Invocateur::i->getIn("Hauteur plot"));
 	rencontrerPlotCommande.p = p;
 	Invocateur::i->getRobot()->rencontrerPlot(p);
 	Commande::effectuerNouvelleCommande(this);
@@ -25,7 +24,6 @@ void RencontrerPlotCommande::execute() {
 
 void RencontrerPlotCommande::desexecute() {
 	p = rencontrerPlotCommande.p;
-	cout << "dese de rencontrerplot" << endl;
 	Invocateur::i->getRobot()->tourner(Invocateur::i->getRobot()->getDirection());
 	Invocateur::i->invoquer();
 }

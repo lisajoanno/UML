@@ -21,6 +21,7 @@ public:
 	AfficheurConcret(Robot* er) : robot(er) {};
 
 	void miseAJour();
+	void afficherMessage(string s);
 };
 
 #endif

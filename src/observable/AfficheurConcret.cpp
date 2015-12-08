@@ -15,3 +15,7 @@ void AfficheurConcret::miseAJour() {
 	cout << "Hauteur du plot : " << robot->getPlot().getHauteur() << endl;
 	cout << "------------" << endl;
 }
+
+void AfficheurConcret::afficherMessage(string s) {
+	cout << s << endl;
+}
