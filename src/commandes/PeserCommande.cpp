@@ -17,9 +17,7 @@ Commande* PeserCommande::constructeurVirtuel() {
 void PeserCommande::execute() {
 	Invocateur::i->getRobot()->peser();
 	Commande::effectuerNouvelleCommande(this);
-	Invocateur::i->invoquer();
 }
 
 void PeserCommande::desexecute() {
-	Invocateur::i->invoquer();
 }

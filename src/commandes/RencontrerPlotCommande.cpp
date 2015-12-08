@@ -19,11 +19,9 @@ void RencontrerPlotCommande::execute() {
 	rencontrerPlotCommande.p = p;
 	Invocateur::i->getRobot()->rencontrerPlot(p);
 	Commande::effectuerNouvelleCommande(this);
-	Invocateur::i->invoquer();
 }
 
 void RencontrerPlotCommande::desexecute() {
 	p = rencontrerPlotCommande.p;
 	Invocateur::i->getRobot()->tourner(Invocateur::i->getRobot()->getDirection());
-	Invocateur::i->invoquer();
 }

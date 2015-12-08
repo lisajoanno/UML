@@ -17,10 +17,8 @@ Commande* RepartirCommande::constructeurVirtuel() {
 void RepartirCommande::execute() {
 	Invocateur::i->getRobot()->repartir();
 	Commande::effectuerNouvelleCommande(this);
-	Invocateur::i->invoquer();
 }
 
 void RepartirCommande::desexecute() {
 	Invocateur::i->getRobot()->figer();
-	Invocateur::i->invoquer();
 }

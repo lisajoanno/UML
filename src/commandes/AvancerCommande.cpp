@@ -21,14 +21,11 @@ void AvancerCommande::execute() {
 	Commande::effectuerNouvelleCommande(this);
 	avancerCommande.x = x;
 	avancerCommande.y = y;
-	// Pour continuer à demander des ordres à l'utilisateur
-	Invocateur::i->invoquer();
 }
 
 void AvancerCommande::desexecute() {
 	x = avancerCommande.x;
 	y = avancerCommande.y;
 	Invocateur::i->getRobot()->avancer(-x, -y);
-	Invocateur::i->invoquer();
 }
 

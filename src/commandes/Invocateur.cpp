@@ -1,15 +1,18 @@
 #include "Invocateur.h"
 #include "Commande.h"
 
-//map<string, Commande*>Commande::mc;
-
 Invocateur* Invocateur::i = new Invocateur(new Robot());
 
 void Invocateur::invoquer() {
     i->getRobot()->afficherMessage("Entrez une commande : ");
     string in;
     cin >> in;
-    Commande::commandesInscrites()[in]->execute();
+    try {
+    	Commande::commandesInscrites().at(in)->execute();
+    } catch (exception ex) {
+        i->getRobot()->afficherMessage("Mauvaise commande.");
+    };
+    i->invoquer();
 }
 
 int Invocateur::getIn(string s) {

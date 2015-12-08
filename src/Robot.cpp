@@ -97,7 +97,7 @@ void Robot::poser() {
 		etat = etat->poser();
 		objet = Objet();
 		afficher();
-	} catch(RobotException e) { };
+	} catch(RobotException e) {	};
 }
 
 // Fait peser son objet le robot.
@@ -126,8 +126,8 @@ int Robot::evaluerPlot() {
 	try {
 		ordre = "evaluer plot";
 		etat->evaluerPlot();
-		return plot.getHauteur();
 		afficher();
+		return plot.getHauteur();
 	} catch(RobotException e) { };
 	return -1;
 }

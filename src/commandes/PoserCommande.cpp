@@ -17,10 +17,8 @@ Commande* PoserCommande::constructeurVirtuel() {
 void PoserCommande::execute() {
 	Invocateur::i->getRobot()->poser();
 	Commande::effectuerNouvelleCommande(this);
-	Invocateur::i->invoquer();
 }
 
 void PoserCommande::desexecute() {
 	// TODO 
-	Invocateur::i->invoquer();
 }

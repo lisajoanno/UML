@@ -19,10 +19,8 @@ void SaisirCommande::execute() {
 	saisirCommande.o = o;
 	Invocateur::i->getRobot()->saisir(o);
 	Commande::effectuerNouvelleCommande(this);
-	Invocateur::i->invoquer();
 }
 
 void SaisirCommande::desexecute() {
 	Invocateur::i->getRobot()->poser();
-	Invocateur::i->invoquer();
 }

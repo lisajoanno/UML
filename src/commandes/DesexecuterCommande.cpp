@@ -22,7 +22,6 @@ void DesexecuterCommande::execute() {
 	// Efface la dernière commande ? Pourquoi pas ? 
 	Commande::commandesEffectuees->pop_back();
 	// Pour continuer à demander des ordres à l'utilisateur
-	Invocateur::i->invoquer();
 }
 
 void DesexecuterCommande::desexecute() {
