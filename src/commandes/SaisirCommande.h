@@ -25,6 +25,9 @@ public:
 
 	void execute();
 	void desexecute();
+	
+	Objet getObjet() { return o; }
+
 };
 
 #endif

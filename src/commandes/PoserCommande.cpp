@@ -1,4 +1,5 @@
 #include "PoserCommande.h"
+#include "SaisirCommande.h"
 
 PoserCommande PoserCommande::poserCommande("POSER");
 
@@ -16,9 +17,10 @@ Commande* PoserCommande::constructeurVirtuel() {
 
 void PoserCommande::execute() {
 	Invocateur::i->getRobot()->poser();
+	desexecute();
 	Commande::effectuerNouvelleCommande(this);
 }
 
 void PoserCommande::desexecute() {
-	// TODO 
+	Invocateur::i->getRobot()->saisir(SaisirCommande::saisirCommande.getObjet());
 }
