@@ -1,5 +1,8 @@
 /**********
 
+Classe CommandeRobot
+
+Interface de toutes les commandes relatives au robot.
 
 **********/
 

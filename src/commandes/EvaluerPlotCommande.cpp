@@ -14,6 +14,7 @@ Commande* EvaluerPlotCommande::constructeurVirtuel() {
 	return new EvaluerPlotCommande();
 }
 
+// 
 void EvaluerPlotCommande::execute() {
 	Invocateur::i->getRobot()->evaluerPlot();
 	Commande::effectuerNouvelleCommande(this);

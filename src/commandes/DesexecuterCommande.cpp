@@ -15,15 +15,15 @@ Commande* DesexecuterCommande::constructeurVirtuel() {
 	return new DesexecuterCommande();
 }
 
+// Desexecute la dernière commande du vecteur des commandes effectuées de Commande
 void DesexecuterCommande::execute() {
 	Invocateur::i->getRobot();
 	// Desexecute la dernière commande
 	Commande::commandesEffectuees->back()->desexecute();
-	// Efface la dernière commande ? Pourquoi pas ? 
 	Commande::commandesEffectuees->pop_back();
-	// Pour continuer à demander des ordres à l'utilisateur
 }
 
+// Rien à faire ici
 void DesexecuterCommande::desexecute() {
 	Invocateur::i->invoquer();
 }

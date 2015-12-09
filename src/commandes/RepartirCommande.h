@@ -1,5 +1,8 @@
 /**********
 
+Classe RepartirCommande
+
+Commande pour faire repartir le robot
 
 **********/
 

@@ -1,3 +1,11 @@
+/**********
+
+Classe RencontrerPlot
+
+Commande pour faire rencontrer un plot le robot
+
+**********/
+
 #ifndef RENCONTRERPLOTCOMMANDE_H
 #define RENCONTRERPLOTCOMMANDE_H
 

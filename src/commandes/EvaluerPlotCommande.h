@@ -1,3 +1,11 @@
+/**********
+
+Classe EvaluerPlotCommande
+
+Commande pour faire evaluer le plot le robot
+
+**********/
+
 #ifndef EVALUERPLOTCOMMANDE_H
 #define EVALUERPLOTCOMMANDE_H
 

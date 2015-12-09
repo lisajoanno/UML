@@ -1,3 +1,11 @@
+/**********
+
+Classe DesexecuterCommande
+
+Commande pour désexecuter la dernier commande (robot ou pas).
+
+**********/
+
 #ifndef DESEXECUTERCOMMANDE_H
 #define DESEXECUTERCOMMANDE_H
 

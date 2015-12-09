@@ -1,5 +1,8 @@
 /**********
 
+Classe TournerCommande
+
+Commande pour faire tourner le robot
 
 **********/
 

@@ -1,5 +1,8 @@
 /**********
 
+Classe SaisirCommande
+
+Commande pour faire saisir le robot
 
 **********/
 

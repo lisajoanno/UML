@@ -1,3 +1,11 @@
+/**********
+
+Classe AvancerCommande
+
+Commande pour faire avancer le robot.
+
+**********/
+
 #ifndef AVANCERCOMMANDE_H
 #define AVANCERCOMMANDE_H
 
