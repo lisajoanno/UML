@@ -10,5 +10,6 @@ void Afficheur::miseAJour() {
 }
 
 void Afficheur::afficherMessage(string s) {
+	(void) s; // supress warning
 	throw RobotException();
 }

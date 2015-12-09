@@ -11,6 +11,10 @@ void Commande::nouvelleCommande(string s, Commande* com) {
 	commandesInscrites()[s] = com->constructeurVirtuel();
 }
 
+Commande* Commande::constructeurVirtuel() {
+	return NULL;
+}
+
 map<string,Commande*>& Commande::commandesInscrites() {
 	static map<string,Commande*>* comInscrites = new map<string,Commande*>;
 	return *comInscrites;

@@ -25,7 +25,7 @@ public:
 
 	Commande();
 	Commande(string s);
-	virtual Commande* constructeurVirtuel() {};
+	virtual Commande* constructeurVirtuel();
 
 	// Liste de toutes les commandes effectuées
 	static vector<Commande*>* commandesEffectuees;
